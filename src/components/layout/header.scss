@@ -1,0 +1,82 @@
+.header {
+  background-color: var(--colorGreyDark);
+  max-width: 111rem;
+  height: 60rem;
+  display: flex;
+  margin: auto;
+
+  .left {
+    width: 40%;
+    height: 100%;
+
+    .left-container {
+      height: 35rem;
+      width: 40rem;
+      display: flex;
+      margin: auto;
+      margin-top: 16.5rem;
+      //   background-color: red;
+      color: white;
+      flex-direction: column;
+      h2 {
+        font-size: 14px;
+        width: 21rem;
+        height: 2rem;
+        font-weight: normal;
+        color: gray;
+        letter-spacing: 10px;
+        margin-bottom: 0;
+      }
+      h1 {
+        width: 40rem;
+        height: 12rem;
+        font-weight: bold;
+        font-size: 56px;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+      }
+      p {
+        height: 7.5rem;
+        width: 35rem;
+        line-height: 25px;
+        font-size: 15px;
+        font-weight: normal;
+      }
+      .link {
+        margin-top: 1rem;
+        width: 16rem;
+        height: 5rem;
+        background-color: var(--primaryColor);
+        text-decoration: none;
+        color: var(--colorWhite);
+
+        font-weight: var(--fontWeightBold);
+        border-radius: 1px;
+        transition: all 0.1s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--primaryColorLight);
+        }
+        div {
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          padding: 1.2rem 2.6rem;
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+  .right {
+    width: 60%;
+
+    .heroImg {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      background: none;
+
+      background-color: var(--colorGreyDark);
+    }
+  }
+}

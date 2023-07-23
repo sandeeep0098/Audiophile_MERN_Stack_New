@@ -1,0 +1,84 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/app/page.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.home {
+  background-color: var(--colorGreyDark);
+}
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/components/layout/header.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.header {
+  background-color: var(--colorGreyDark);
+  max-width: 111rem;
+  height: 60rem;
+  display: flex;
+  margin: auto;
+}
+.header .left {
+  width: 40%;
+  height: 100%;
+}
+.header .left .left-container {
+  height: 35rem;
+  width: 40rem;
+  display: flex;
+  margin: auto;
+  margin-top: 16.5rem;
+  color: white;
+  flex-direction: column;
+}
+.header .left .left-container h2 {
+  font-size: 14px;
+  width: 21rem;
+  height: 2rem;
+  font-weight: normal;
+  color: gray;
+  letter-spacing: 10px;
+  margin-bottom: 0;
+}
+.header .left .left-container h1 {
+  width: 40rem;
+  height: 12rem;
+  font-weight: bold;
+  font-size: 56px;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+.header .left .left-container p {
+  height: 7.5rem;
+  width: 35rem;
+  line-height: 25px;
+  font-size: 15px;
+  font-weight: normal;
+}
+.header .left .left-container .link {
+  margin-top: 1rem;
+  width: 16rem;
+  height: 5rem;
+  background-color: var(--primaryColor);
+  text-decoration: none;
+  color: var(--colorWhite);
+  font-weight: var(--fontWeightBold);
+  border-radius: 1px;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+.header .left .left-container .link:hover {
+  background-color: var(--primaryColorLight);
+}
+.header .left .left-container .link div {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1.2rem 2.6rem;
+  font-size: 1.3rem;
+}
+.header .right {
+  width: 60%;
+}
+.header .right .heroImg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background: none;
+  background-color: var(--colorGreyDark);
+}

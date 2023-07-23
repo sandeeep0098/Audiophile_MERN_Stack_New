@@ -1,0 +1,53 @@
+.navbar {
+  background-color: var(--colorGreyDark);
+  height: 10rem;
+
+  .wrapper {
+    background-color: var(--colorGreyDark);
+    border-bottom: 1px solid #ffffff7d;
+
+    display: flex;
+    justify-content: space-between;
+    max-width: 111rem;
+    height: 5.8rem;
+    margin: 0 auto;
+    padding: 1.85rem 0;
+    align-items: center;
+
+    .center {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-transform: uppercase;
+
+      .navbarlinks {
+        text-decoration: none;
+        margin: 1rem;
+        padding: 0.5rem;
+        text-decoration: none;
+        color: var(--colorWhite);
+        font-size: 1.3rem;
+        font-weight: bold;
+        transition: all 0.1s ease-in-out;
+
+        &:hover {
+          color: var(--primaryColor);
+        }
+      }
+    }
+
+    .righticon {
+      color: var(--colorWhite);
+
+      .righticonimg {
+        height: 2.6rem;
+        width: 2.5rem;
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+        &:hover {
+          color: var(--primaryColor);
+        }
+      }
+    }
+  }
+}

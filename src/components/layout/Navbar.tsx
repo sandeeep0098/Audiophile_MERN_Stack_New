@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../../assets/shared/desktop/logo.svg';
 
-// import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 const Navbar = () => {
   return (
@@ -36,7 +36,7 @@ const Navbar = () => {
             alt="cart-logo"
             className="righticonimg"
           /> */}
-          {/* <ShoppingCartOutlinedIcon className="righticonimg" /> */}
+          <ShoppingCartOutlinedIcon className="righticonimg" />
         </div>
       </nav>
     </div>

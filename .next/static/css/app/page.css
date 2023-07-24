@@ -104,8 +104,8 @@
   z-index: 2;
   position: relative;
   display: flex;
-  flex-direction: column; /* Stack elements vertically inside the imagesection */
-  align-items: center; /* Center items horizontally inside the imagesection */
+  flex-direction: column;
+  align-items: center;
 }
 .categoriesSection .imagesection .categoriesImages {
   height: 25rem;
@@ -144,4 +144,147 @@
   height: 3rem;
   width: 3rem;
   padding-top: -3px;
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/components/layout/productsection.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.productsection {
+  background-color: var(--colorWhite);
+}
+.productsection .top .topcontainer {
+  width: 111rem;
+  height: 56rem;
+  background-color: var(--primaryColor);
+  position: relative;
+  display: flex;
+  margin: auto;
+  margin-bottom: 5rem;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+.productsection .top .topcontainer .left {
+  width: 50%;
+}
+.productsection .top .topcontainer .left .productimage {
+  height: 50rem;
+  width: 42rem;
+  position: absolute;
+  top: 13%;
+  left: 12%;
+  object-fit: cover;
+}
+.productsection .top .topcontainer .right {
+  width: 50%;
+}
+.productsection .top .topcontainer .right .right-container {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  width: 35rem;
+  height: 31rem;
+  margin-top: 5rem;
+}
+.productsection .top .topcontainer .right .right-container h1 {
+  color: var(--colorWhite);
+  margin-bottom: 2rem;
+}
+.productsection .top .topcontainer .right .right-container p {
+  color: var(--colorWhite);
+  margin-bottom: 3rem;
+}
+.productsection .center {
+  width: 111rem;
+  display: flex;
+  margin: auto;
+  margin-bottom: 5rem;
+  border-radius: 10px;
+}
+.productsection .center .productimage {
+  position: relative;
+  border-radius: 10px;
+}
+.productsection .center .center-text {
+  position: absolute;
+  left: 20%;
+  bottom: -145%;
+}
+.productsection .center .center-text h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+.productsection .bottom {
+  width: 111rem;
+  display: flex;
+  margin: auto;
+  margin-bottom: 15rem;
+  justify-content: space-between;
+}
+.productsection .bottom .left .productimage {
+  border-radius: 10px;
+}
+.productsection .bottom .right {
+  height: 32rem;
+  width: 54rem;
+  background-color: var(--colorGrey);
+  border-radius: 10px;
+}
+.productsection .bottom .right .right-container {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  margin-top: 5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.productsection .bottom .right .right-container h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+.productsection .bottom .right .right-container .button {
+  width: 25rem;
+  height: 200rem;
+}
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/components/UI/productLinkPrimaryButton.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.productLink {
+  font-size: 1.3rem;
+  font-weight: var(--fontWeightBold);
+  text-decoration: none;
+  padding: 1.2rem 2.6rem;
+  border-radius: 1px;
+  transition: all 0.1s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.primary {
+  background-color: var(--primaryColor);
+  color: var(--colorWhite);
+}
+
+.primary:hover {
+  background-color: var(--primaryColorLight);
+}
+
+.dark {
+  background-color: var(--colorBlack);
+  color: var(--colorWhite);
+}
+
+.dark:hover {
+  background-color: transparent;
+  color: var(--colorBlack);
+  border: 1px solid var(--colorBlack);
+}
+
+.transparent {
+  background-color: transparent;
+  color: var(--colorBlack);
+  border: 1px solid var(--colorBlack);
+}
+
+.transparent:hover {
+  background-color: var(--colorBlack);
+  color: var(--colorWhite);
 }

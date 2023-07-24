@@ -1,0 +1,107 @@
+.productsection {
+  background-color: var(--colorWhite);
+
+  .top {
+    .topcontainer {
+      width: 111rem;
+      height: 56rem;
+      background-color: var(--primaryColor);
+      position: relative;
+      display: flex;
+      margin: auto;
+      margin-bottom: 5rem;
+      overflow: hidden;
+      border-radius: 1rem;
+
+      .left {
+        width: 50%;
+
+        .productimage {
+          height: 50rem;
+          width: 42rem;
+          position: absolute;
+          top: 13%;
+          left: 12%;
+          object-fit: cover;
+        }
+      }
+      .right {
+        width: 50%;
+        .right-container {
+          display: flex;
+          margin: auto;
+          flex-direction: column;
+          width: 35rem;
+          height: 31rem;
+          margin-top: 5rem;
+
+          h1 {
+            color: var(--colorWhite);
+            margin-bottom: 2rem;
+          }
+          p {
+            color: var(--colorWhite);
+            margin-bottom: 3rem;
+          }
+        }
+      }
+    }
+  }
+
+  .center {
+    width: 111rem;
+    display: flex;
+    margin: auto;
+    margin-bottom: 5rem;
+    border-radius: 10px;
+    .productimage {
+      position: relative;
+      border-radius: 10px;
+    }
+    .center-text {
+      position: absolute;
+
+      left: 20%;
+      bottom: -145%;
+      h2 {
+        font-size: 28px;
+        font-weight: bold;
+      }
+    }
+  }
+  .bottom {
+    width: 111rem;
+    display: flex;
+    margin: auto;
+    margin-bottom: 15rem;
+    justify-content: space-between;
+    .left {
+      .productimage {
+        border-radius: 10px;
+      }
+    }
+    .right {
+      height: 32rem;
+      width: 54rem;
+      background-color: var(--colorGrey);
+      border-radius: 10px;
+
+      .right-container {
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+        margin-top: 5rem;
+        width: fit-content;
+
+        h2 {
+          font-size: 28px;
+          font-weight: bold;
+        }
+        .button {
+          width: 25rem;
+          height: 200rem;
+        }
+      }
+    }
+  }
+}

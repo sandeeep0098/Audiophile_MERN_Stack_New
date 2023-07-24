@@ -15,6 +15,7 @@ const Header = () => {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
           </p>
+          {/* <ProductLinkPrimaryButton path="/" type="dark" /> */}
           <Link href="/" className="link">
             <div>See Products</div>
           </Link>

@@ -51,6 +51,12 @@
   font-size: 15px;
   font-weight: normal;
 }
+.header .left .left-container .button {
+  margin-top: 1rem;
+  width: 16rem;
+  display: flex;
+  justify-content: center;
+}
 .header .left .left-container .link {
   margin-top: 1rem;
   width: 16rem;
@@ -81,6 +87,51 @@
   object-fit: cover;
   background: none;
   background-color: var(--colorGreyDark);
+}
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/components/UI/productLinkPrimaryButton.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.productLink {
+  font-size: 1.3rem;
+  font-weight: var(--fontWeightBold);
+  text-decoration: none;
+  padding: 1.2rem 2.6rem;
+  border-radius: 1px;
+  transition: all 0.1s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.primary {
+  background-color: var(--primaryColor);
+  color: var(--colorWhite);
+}
+
+.primary:hover {
+  background-color: var(--primaryColorLight);
+}
+
+.dark {
+  background-color: var(--colorBlack);
+  color: var(--colorWhite);
+  z-index: 1;
+}
+
+.dark:hover {
+  background-color: transparent;
+  color: var(--colorBlack);
+  border: 1px solid var(--colorBlack);
+}
+
+.transparent {
+  background-color: transparent;
+  color: var(--colorBlack);
+  border: 1px solid var(--colorBlack);
+}
+
+.transparent:hover {
+  background-color: var(--colorBlack);
+  color: var(--colorWhite);
 }
 /*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/components/layout/categoriesSection.scss ***!
@@ -229,6 +280,11 @@
   color: var(--colorWhite);
   margin-bottom: 3rem;
 }
+.productsection .top .topcontainer .right .right-container .button {
+  width: 16rem;
+  display: flex;
+  justify-content: center;
+}
 .productsection .center {
   width: 111rem;
   display: flex;
@@ -277,53 +333,8 @@
   font-weight: bold;
 }
 .productsection .bottom .right .right-container .button {
-  width: 25rem;
-  height: 200rem;
-}
-/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/components/UI/productLinkPrimaryButton.scss ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.productLink {
-  font-size: 1.3rem;
-  font-weight: var(--fontWeightBold);
-  text-decoration: none;
-  padding: 1.2rem 2.6rem;
-  border-radius: 1px;
-  transition: all 0.1s;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.primary {
-  background-color: var(--primaryColor);
-  color: var(--colorWhite);
-}
-
-.primary:hover {
-  background-color: var(--primaryColorLight);
-}
-
-.dark {
-  background-color: var(--colorBlack);
-  color: var(--colorWhite);
-  z-index: 1;
-}
-
-.dark:hover {
-  background-color: transparent;
-  color: var(--colorBlack);
-  border: 1px solid var(--colorBlack);
-}
-
-.transparent {
-  background-color: transparent;
-  color: var(--colorBlack);
-  border: 1px solid var(--colorBlack);
-}
-
-.transparent:hover {
-  background-color: var(--colorBlack);
-  color: var(--colorWhite);
+  display: flex;
+  justify-content: center;
 }
 /*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/components/layout/aboutus.scss ***!

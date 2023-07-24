@@ -30,7 +30,11 @@ const ProductSection = () => {
                 Upgrade to premium speakers that are phenomenally built to
                 deliver truly remarkable sound.
               </p>
-              <ProductLinkPrimaryButton path="/" type="dark" />
+              <ProductLinkPrimaryButton
+                path="/"
+                type="dark"
+                className="button"
+              />
             </div>
           </div>
         </div>

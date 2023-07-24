@@ -1,12 +1,19 @@
+'use client';
 import React from 'react';
 import './navbar.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../../assets/shared/desktop/logo.svg';
-
+import { useState } from 'react';
+import Cart from '../cart/Cart';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 const Navbar = () => {
+  const [cartisopen, setCartIsOpen] = useState(false);
+  const showCartHandler = () => {
+    setCartIsOpen(!cartisopen);
+  };
+
   return (
     <div className="navbar">
       <nav className="wrapper">
@@ -29,15 +36,17 @@ const Navbar = () => {
         </div>
 
         <div className="righticon">
-          {/* <Image
-            src={cart}
-            width={26}
-            height={20}
-            alt="cart-logo"
+          <ShoppingCartOutlinedIcon
             className="righticonimg"
-          /> */}
-          <ShoppingCartOutlinedIcon className="righticonimg" />
+            onClick={showCartHandler}
+          />
         </div>
+        {cartisopen && (
+          <>
+            <div className="backdrop" onClick={showCartHandler}></div>
+            <Cart />
+          </>
+        )}
       </nav>
     </div>
   );

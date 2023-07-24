@@ -1,0 +1,107 @@
+.cart {
+  position: absolute;
+  right: 10%;
+  top: 15%;
+  height: 50rem;
+  overflow: auto;
+  width: 38rem;
+  background-color: var(--colorWhite);
+  border-radius: 1rem;
+  z-index: 4;
+
+  .top {
+    width: 32rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    h6 {
+      font-weight: bold;
+      font-size: 18px;
+      letter-spacing: 1.3px;
+    }
+    p {
+      color: gray;
+      text-decoration: underline;
+    }
+  }
+  .center {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    .cartItem {
+      width: 32rem;
+      height: 6.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .left {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        .blackheadphones {
+          height: 6.4rem;
+          width: 6.4rem;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+
+        .text-container {
+          display: flex;
+          gap: rem;
+          align-items: center;
+
+          h6 {
+            span {
+              color: gray;
+            }
+          }
+        }
+      }
+      .right {
+        display: flex;
+        button {
+          border: none;
+          width: 3.2rem;
+          height: 3.2rem;
+        }
+        .demo {
+          background-color: #efefef;
+          height: 3.2rem;
+          width: 3.2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    width: 32rem;
+    margin: auto;
+    margin-bottom: 1rem;
+
+    .total-price {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h6 {
+        color: gray;
+      }
+      h5 {
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 0;
+      }
+    }
+    .button-demo {
+      width: 27rem;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 4rem;
+    }
+  }
+}

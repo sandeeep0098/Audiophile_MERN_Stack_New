@@ -80,6 +80,11 @@
             color: var(--colorWhite);
             margin-bottom: 3rem;
           }
+          .button {
+            width: 16rem;
+            display: flex;
+            justify-content: center;
+          }
         }
       }
     }
@@ -135,8 +140,8 @@
           font-weight: bold;
         }
         .button {
-          width: 25rem;
-          height: 200rem;
+          display: flex;
+          justify-content: center;
         }
       }
     }

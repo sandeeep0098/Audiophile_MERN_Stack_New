@@ -8,7 +8,11 @@ interface Props {
   className?: string;
 }
 
-const ProductLinkPrimaryButton: React.FC<Props> = ({ path, type }) => {
+const ProductLinkPrimaryButton: React.FC<Props> = ({
+  path,
+  type,
+  className,
+}) => {
   const productLinkTypeClass =
     type === 'primary'
       ? 'primary'
@@ -19,7 +23,10 @@ const ProductLinkPrimaryButton: React.FC<Props> = ({ path, type }) => {
       : 'primary';
 
   return (
-    <Link href={path} className={`productLink ${productLinkTypeClass}`}>
+    <Link
+      href={path}
+      className={`productLink ${productLinkTypeClass} ${className}`}
+    >
       See Product
     </Link>
   );

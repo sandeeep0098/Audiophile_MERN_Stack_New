@@ -132,6 +132,161 @@ h6 {
 .navbar .wrapper .righticon .righticonimg:hover {
   color: var(--primaryColor);
 }
+.navbar .wrapper .backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 4;
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/components/cart/Cart.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.cart {
+  position: absolute;
+  right: 10%;
+  top: 15%;
+  height: 50rem;
+  overflow: auto;
+  width: 38rem;
+  background-color: var(--colorWhite);
+  border-radius: 1rem;
+  z-index: 4;
+}
+.cart .top {
+  width: 32rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+.cart .top h6 {
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 1.3px;
+}
+.cart .top p {
+  color: gray;
+  text-decoration: underline;
+}
+.cart .center {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.cart .center .cartItem {
+  width: 32rem;
+  height: 6.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart .center .cartItem .left {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.cart .center .cartItem .left .blackheadphones {
+  height: 6.4rem;
+  width: 6.4rem;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.cart .center .cartItem .left .text-container {
+  display: flex;
+  gap: rem;
+  align-items: center;
+}
+.cart .center .cartItem .left .text-container h6 span {
+  color: gray;
+}
+.cart .center .cartItem .right {
+  display: flex;
+}
+.cart .center .cartItem .right button {
+  border: none;
+  width: 3.2rem;
+  height: 3.2rem;
+}
+.cart .center .cartItem .right .demo {
+  background-color: #efefef;
+  height: 3.2rem;
+  width: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart .bottom {
+  width: 32rem;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+.cart .bottom .total-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart .bottom .total-price h6 {
+  color: gray;
+}
+.cart .bottom .total-price h5 {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0;
+}
+.cart .bottom .button-demo {
+  width: 27rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/components/UI/productLinkPrimaryButton.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.productLink {
+  font-size: 1.3rem;
+  font-weight: var(--fontWeightBold);
+  text-decoration: none;
+  padding: 1.2rem 2.6rem;
+  border-radius: 1px;
+  transition: all 0.1s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.primary {
+  background-color: var(--primaryColor);
+  color: var(--colorWhite);
+}
+
+.primary:hover {
+  background-color: var(--primaryColorLight);
+}
+
+.dark {
+  background-color: var(--colorBlack);
+  color: var(--colorWhite);
+  z-index: 1;
+}
+
+.dark:hover {
+  background-color: transparent;
+  color: var(--colorBlack);
+  border: 1px solid var(--colorBlack);
+}
+
+.transparent {
+  background-color: transparent;
+  color: var(--colorBlack);
+  border: 1px solid var(--colorBlack);
+}
+
+.transparent:hover {
+  background-color: var(--colorBlack);
+  color: var(--colorWhite);
+}
 /*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/components/layout/footer.scss ***!
   \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/

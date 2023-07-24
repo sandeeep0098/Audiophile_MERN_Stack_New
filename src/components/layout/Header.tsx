@@ -3,6 +3,7 @@ import './header.scss';
 import heroImage from '../../assets/home/desktop/image-hero.png';
 import Image from 'next/image';
 import Link from 'next/link';
+import ProductLinkPrimaryButton from '../UI/productLinkPrimaryButton';
 const Header = () => {
   return (
     <div className="header">
@@ -15,10 +16,7 @@ const Header = () => {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
           </p>
-          {/* <ProductLinkPrimaryButton path="/" type="dark" /> */}
-          <Link href="/" className="link">
-            <div>See Products</div>
-          </Link>
+          <ProductLinkPrimaryButton path="/" type="primary"  className='button'/>
         </div>
       </div>
       <div className="right">

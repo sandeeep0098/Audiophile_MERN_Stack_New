@@ -18,6 +18,9 @@ const ProductSection = () => {
               alt="productimages"
               src={productImage1}
             ></Image>
+            <div className="backdropoverlaysmall"></div>
+            <div className="backdropoverlaymedium"></div>
+            <div className="backdropoverlaylarge"></div>
           </div>
           <div className="right">
             <div className="right-container">
@@ -55,7 +58,11 @@ const ProductSection = () => {
         <div className="right">
           <div className="right-container">
             <h2>YX1 EARPHONES</h2>
-            <ProductLinkPrimaryButton type="transparent" path="/" className='button' />
+            <ProductLinkPrimaryButton
+              type="transparent"
+              path="/"
+              className="button"
+            />
           </div>
         </div>
       </div>

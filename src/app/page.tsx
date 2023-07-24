@@ -3,6 +3,7 @@ import './page.scss';
 import Header from '@/components/layout/Header';
 import CategoriesSection from '@/components/layout/CategoriesSection';
 import ProductSection from '@/components/layout/ProductSection';
+import AboutUs from '@/components/layout/AboutUs';
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Header />
       <CategoriesSection />
       <ProductSection />
+      <AboutUs />
     </div>
   );
 };

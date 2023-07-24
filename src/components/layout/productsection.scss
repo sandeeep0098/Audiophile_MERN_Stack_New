@@ -23,6 +23,43 @@
           top: 13%;
           left: 12%;
           object-fit: cover;
+          z-index: 1;
+        }
+        .backdropoverlaysmall {
+          position: absolute;
+          width: 500px;
+          height: 500px;
+          border: 1px solid var(--colorGrey);
+          border-radius: 50%;
+          opacity: 20%;
+          position: absolute;
+          top: 32%;
+          left: 8%;
+          z-index: 0;
+        }
+        .backdropoverlaymedium {
+          position: absolute;
+          width: 600px;
+          height: 600px;
+          border: 1px solid var(--colorGrey);
+          border-radius: 50%;
+          opacity: 20%;
+          position: absolute;
+          top: 20%;
+          left: 3%;
+          z-index: 0;
+        }
+        .backdropoverlaylarge {
+          position: absolute;
+          width: 100rem;
+          height: 100rem;
+          border: 1px solid var(--colorGrey);
+          border-radius: 50%;
+          opacity: 20%;
+          position: absolute;
+          top: -20%;
+          left: -20%;
+          z-index: 0;
         }
       }
       .right {
@@ -73,7 +110,7 @@
     width: 111rem;
     display: flex;
     margin: auto;
-    margin-bottom: 15rem;
+
     justify-content: space-between;
     .left {
       .productimage {

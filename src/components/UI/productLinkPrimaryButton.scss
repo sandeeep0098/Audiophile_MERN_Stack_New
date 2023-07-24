@@ -20,6 +20,7 @@
 .dark {
   background-color: var(--colorBlack);
   color: var(--colorWhite);
+  z-index: 1;
 }
 .dark:hover {
   background-color: transparent;

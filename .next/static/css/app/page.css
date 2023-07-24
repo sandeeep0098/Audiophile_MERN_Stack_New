@@ -172,6 +172,43 @@
   top: 13%;
   left: 12%;
   object-fit: cover;
+  z-index: 1;
+}
+.productsection .top .topcontainer .left .backdropoverlaysmall {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border: 1px solid var(--colorGrey);
+  border-radius: 50%;
+  opacity: 20%;
+  position: absolute;
+  top: 32%;
+  left: 8%;
+  z-index: 0;
+}
+.productsection .top .topcontainer .left .backdropoverlaymedium {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border: 1px solid var(--colorGrey);
+  border-radius: 50%;
+  opacity: 20%;
+  position: absolute;
+  top: 20%;
+  left: 3%;
+  z-index: 0;
+}
+.productsection .top .topcontainer .left .backdropoverlaylarge {
+  position: absolute;
+  width: 100rem;
+  height: 100rem;
+  border: 1px solid var(--colorGrey);
+  border-radius: 50%;
+  opacity: 20%;
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  z-index: 0;
 }
 .productsection .top .topcontainer .right {
   width: 50%;
@@ -216,7 +253,6 @@
   width: 111rem;
   display: flex;
   margin: auto;
-  margin-bottom: 15rem;
   justify-content: space-between;
 }
 .productsection .bottom .left .productimage {
@@ -270,6 +306,7 @@
 .dark {
   background-color: var(--colorBlack);
   color: var(--colorWhite);
+  z-index: 1;
 }
 
 .dark:hover {
@@ -287,4 +324,40 @@
 .transparent:hover {
   background-color: var(--colorBlack);
   color: var(--colorWhite);
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/components/layout/aboutus.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.aboutus {
+  background-color: var(--colorWhite);
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+}
+.aboutus .wrapper {
+  display: flex;
+  max-width: 111rem;
+  margin: auto;
+}
+.aboutus .wrapper .left {
+  width: 50%;
+}
+.aboutus .wrapper .left .left-container {
+  margin-top: 12rem;
+  width: 45rem;
+}
+.aboutus .wrapper .left .left-container h1 {
+  font-weight: bold;
+  font-size: 40px;
+}
+.aboutus .wrapper .left .left-container h1 span {
+  color: var(--primaryColor);
+}
+.aboutus .wrapper .left .left-container p {
+  color: gray;
+}
+.aboutus .wrapper .right {
+  width: 50%;
+}
+.aboutus .wrapper .right .userimg {
+  border-radius: 10px;
 }

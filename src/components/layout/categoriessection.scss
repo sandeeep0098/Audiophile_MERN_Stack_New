@@ -1,0 +1,67 @@
+.categoriesSection {
+  background-color: var(--colorWhite);
+  height: 56rem;
+
+  .wrapper {
+    display: flex;
+    max-width: 111rem;
+    margin: auto;
+    justify-content: space-between;
+  }
+
+  .imagesection {
+    width: 36rem;
+    height: 21rem;
+    background-color: var(--colorGrey);
+    border-radius: 10px;
+    margin-top: 17rem;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .categoriesImages {
+      height: 25rem;
+      width: 20rem;
+      object-fit: cover;
+      position: absolute;
+      top: -60%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+
+    .links {
+      position: absolute;
+      left: 50%;
+      top: 35%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h6 {
+        margin-bottom: 1rem;
+      }
+
+      .link {
+        color: gray;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+
+        .icon {
+          margin-top: 1px;
+          color: var(--primaryColor);
+          padding-left: 1rem;
+          height: 3rem;
+          width: 3rem;
+          padding-top: -3px;
+        }
+      }
+    }
+  }
+}

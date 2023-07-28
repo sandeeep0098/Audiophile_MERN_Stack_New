@@ -1,0 +1,59 @@
+.productlist {
+  padding-top: 15rem;
+  .wrapper {
+    width: 111rem;
+    display: flex;
+    margin: auto;
+
+    ul {
+      display: flex;
+      list-style: none;
+      flex-direction: column;
+      gap: 15rem;
+      li {
+        display: flex;
+        margin: auto;
+        gap: 11rem;
+
+        justify-content: space-between;
+        &:nth-child(even) {
+          flex-direction: row-reverse;
+        }
+        &:last-child {
+          margin-bottom: 10rem;
+        }
+
+        .left {
+          width: 50%;
+          .headphonesimg {
+            width: 54rem;
+            height: 56rem;
+            object-fit: cover;
+            border-radius: 1rem;
+          }
+        }
+        .right {
+          width: 50%;
+          .right-container {
+            margin-top: 10rem;
+
+            .newproduct {
+              color: var(--primaryColor);
+              letter-spacing: 1rem;
+              text-transform: uppercase;
+              margin-bottom: 2rem;
+            }
+            h2 {
+              margin-top: 1rem;
+              max-width: 30rem;
+            }
+            p {
+              color: gray;
+              margin-bottom: 5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

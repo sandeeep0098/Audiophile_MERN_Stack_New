@@ -3,7 +3,7 @@ import './page.scss';
 import CategoriesSection from '@/components/layout/CategoriesSection';
 import AboutUs from '@/components/layout/AboutUs';
 import ProductList from '@/components/product/ProductList';
-
+import { ParamProps } from '@/app/types/index';
 const DUMMY_DATA = [
   {
     id: 1,
@@ -581,14 +581,7 @@ const DUMMY_DATA = [
   },
 ];
 
-interface props {
-  params: {
-    categories: string;
-  };
-}
-
-const categoriesPage = ({ params }: props) => {
-  console.log(DUMMY_DATA);
+const categoriesPage = ({ params }: ParamProps) => {
   return (
     <div>
       <div className="heading-container">

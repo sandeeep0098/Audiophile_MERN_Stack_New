@@ -5,40 +5,9 @@ import Image from 'next/image';
 import headphoneImage from '../../assets/product-xx99-mark-one-headphones/desktop/image-product.jpg';
 import ProductLinkPrimaryButton from '../UI/productLinkPrimaryButton';
 import { useParams } from 'next/navigation';
+import { ProductProps } from '@/app/types/index';
 
-interface includeItems {
-  quantity: number;
-  item: string;
-}
-interface Product {
-  _id: number;
-  name: string;
-  category: string;
-  new: boolean;
-  price: number;
-  description: string;
-  features: string;
-  includes: includeItems[];
-  gallery: {
-    first: {
-      mobile: string;
-      tablet: string;
-      desktop: string;
-    };
-    second: {
-      mobile: string;
-      tablet: string;
-      desktop: string;
-    };
-    third: {
-      mobile: string;
-      tablet: string;
-      desktop: string;
-    };
-  };
-}
-
-const ProductList: React.FC<{ products: Product[] }> = ({ products }) => {
+const ProductList: React.FC<{ products: ProductProps[] }> = ({ products }) => {
   const params = useParams();
   return (
     <div className="productlist">
@@ -49,7 +18,7 @@ const ProductList: React.FC<{ products: Product[] }> = ({ products }) => {
             .map(
               (product) =>
                 product.category === params.categories && (
-                  <li key={product._id}>
+                  <li key={product.id}>
                     <div className="left">
                       <Image
                         className="headphonesimg"

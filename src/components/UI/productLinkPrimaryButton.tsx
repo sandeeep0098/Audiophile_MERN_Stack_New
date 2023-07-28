@@ -1,17 +1,13 @@
 import React from 'react';
 import './productLinkPrimaryButton.scss';
 import Link from 'next/link';
+import { CustomButtonProps } from '@/app/types/index';
 
-interface Props {
-  path: string;
-  type: string;
-  className?: string;
-}
-
-const ProductLinkPrimaryButton: React.FC<Props> = ({
+const ProductLinkPrimaryButton: React.FC<CustomButtonProps> = ({
   path,
   type,
   className,
+  name,
 }) => {
   const productLinkTypeClass =
     type === 'primary'
@@ -27,7 +23,7 @@ const ProductLinkPrimaryButton: React.FC<Props> = ({
       href={path}
       className={`productLink ${productLinkTypeClass} ${className}`}
     >
-      See Product
+      {name ? name : 'See Product'}
     </Link>
   );
 };

@@ -37,6 +37,9 @@
         text-decoration: none;
         text-transform: uppercase;
         color: var(--colorWhite);
+        &:hover {
+          color: var(--primaryColor);
+        }
       }
     }
 

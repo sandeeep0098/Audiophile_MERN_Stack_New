@@ -330,6 +330,9 @@ h6 {
   text-transform: uppercase;
   color: var(--colorWhite);
 }
+.footer .right .top .footerlinks:hover {
+  color: var(--primaryColor);
+}
 .footer .right .bottom {
   margin-right: 11rem;
 }

@@ -1,14 +1,15 @@
 'use client';
-import React from 'react';
+import React, { FC } from 'react';
 import './productlist.scss';
 import Image from 'next/image';
-import headphoneImage from '../../assets/product-xx99-mark-one-headphones/desktop/image-product.jpg';
+
 import ProductLinkPrimaryButton from '../UI/productLinkPrimaryButton';
 import { useParams } from 'next/navigation';
 import { ProductProps } from '@/app/types/index';
 
 const ProductList: React.FC<{ products: ProductProps[] }> = ({ products }) => {
   const params = useParams();
+
   return (
     <div className="productlist">
       <div className="wrapper">
@@ -21,9 +22,11 @@ const ProductList: React.FC<{ products: ProductProps[] }> = ({ products }) => {
                   <li key={product.id}>
                     <div className="left">
                       <Image
-                        className="headphonesimg"
-                        src={headphoneImage}
+                        src={product.image.desktop}
                         alt="img"
+                        className="productimg"
+                        width={540}
+                        height={560}
                       />
                     </div>
                     <div className="right">

@@ -2,10 +2,10 @@ import React from 'react';
 import './footer.scss';
 import Image from 'next/image';
 import Link from 'next/link';
-import instagrainIcon from '../../assets/shared/desktop/icon-instagram.svg';
-import facebookIcon from '../../assets/shared/desktop/icon-facebook.svg';
-import twitterIcon from '../../assets/shared/desktop/icon-twitter.svg';
-import logo from '../../assets/shared/desktop/logo.svg';
+import instagrainIcon from '../../../public/assets/shared/desktop/icon-instagram.svg';
+import facebookIcon from '../../../public/assets/shared/desktop/icon-facebook.svg';
+import twitterIcon from '../../../public/assets/shared/desktop/icon-twitter.svg';
+import logo from '../../../public/assets/shared/desktop/logo.svg';
 
 const Footer = () => {
   return (
@@ -29,14 +29,14 @@ const Footer = () => {
         <div className="top">
           <Link className="footerlinks" href="/">
             Home
-          </Link>{' '}
-          <Link className="footerlinks" href="/">
+          </Link>
+          <Link className="footerlinks" href="/headphones">
             Headphones
-          </Link>{' '}
-          <Link className="footerlinks" href="/">
+          </Link>
+          <Link className="footerlinks" href="/speakers">
             Speakers
-          </Link>{' '}
-          <Link className="footerlinks" href="/">
+          </Link>
+          <Link className="footerlinks" href="/earphones">
             Earphones
           </Link>
         </div>

@@ -1,9 +1,10 @@
 import React from 'react';
 import './productsection.scss';
 import Image from 'next/image';
-import productImage1 from '@/assets/home/desktop/image-speaker-zx9.png';
-import productImage2 from '@/assets/home/desktop/image-speaker-zx7.jpg';
-import productImage3 from '@/assets/home/desktop/image-earphones-yx1.jpg';
+import productImage1 from '@../../../public/assets/home/desktop/image-speaker-zx9.png';
+
+import productImage2 from '@../../../public/assets/home/desktop/image-speaker-zx7.jpg';
+import productImage3 from '@../../../public/assets/home/desktop/image-earphones-yx1.jpg';
 import ProductLinkPrimaryButton from '../UI/productLinkPrimaryButton';
 
 const ProductSection = () => {

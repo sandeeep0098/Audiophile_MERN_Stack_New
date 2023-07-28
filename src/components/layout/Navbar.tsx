@@ -3,7 +3,7 @@ import React from 'react';
 import './navbar.scss';
 import Image from 'next/image';
 import Link from 'next/link';
-import logo from '../../assets/shared/desktop/logo.svg';
+import logo from '../../../public/assets/shared/desktop/logo.svg';
 import { useState } from 'react';
 import Cart from '../cart/Cart';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
@@ -27,11 +27,11 @@ const Navbar = () => {
           <Link className="navbarlinks" href="/headphones">
             Headphones
           </Link>
-          <Link className="navbarlinks" href="/">
+          <Link className="navbarlinks" href="/speakers">
             Speakers
           </Link>
-          <Link className="navbarlinks" href="/">
-            Earphone
+          <Link className="navbarlinks" href="/earphones">
+            Earphones
           </Link>
         </div>
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import './aboutus.scss';
 import Image from 'next/image';
-import userImage from '../../assets/shared/desktop/image-best-gear.jpg';
+import userImage from '../../../public/assets/shared/desktop/image-best-gear.jpg';
 
 const AboutUs = () => {
   return (

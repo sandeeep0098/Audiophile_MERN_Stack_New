@@ -1,10 +1,10 @@
 import React from 'react';
 import './Cart.scss';
 import ProductLinkPrimaryButton from '../UI/productLinkPrimaryButton';
-import blackheadphones from '../../assets/cart/image-xx99-mark-two-headphones.jpg';
+import blackheadphones from '../../../public/assets/cart/image-xx99-mark-two-headphones.jpg';
 import Image from 'next/image';
-import whiteheadphones from '../../assets/cart/image-xx59-headphones.jpg';
-import speaker from '../../assets/cart/image-yx1-earphones.jpg';
+import whiteheadphones from '../../../public/assets/cart/image-xx59-headphones.jpg';
+import speaker from '../../../public/assets/cart/image-yx1-earphones.jpg';
 
 const Cart = () => {
   return (

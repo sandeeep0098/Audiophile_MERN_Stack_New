@@ -6,11 +6,21 @@ import ProductList from '@/components/product/ProductList';
 import { ParamProps } from '@/app/types/index';
 
 export async function getProducts() {
-  const res = await fetch('http://localhost:3000/api/products', {
-    next: { revalidate: 60 },
-  });
-  const products = await res.json();
-  return products;
+  try {
+    const res = await fetch('http://localhost:3000/api/products', {
+      next: { revalidate: 60 },
+    });
+
+    if (!res.ok) {
+      throw new Error('Failed to fetch products from the API.');
+    }
+
+    const products = await res.json();
+    return products;
+  } catch (error: any) {
+    console.error('Error fetching products:', error.message);
+    return <div>An unexpected error occurred. Please try again later.</div>;
+  }
 }
 
 export default async function ({ params }: ParamProps) {

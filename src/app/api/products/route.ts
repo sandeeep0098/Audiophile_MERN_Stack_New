@@ -2,7 +2,7 @@ import connectMongoDB from '@/libs/mongodb';
 import Product from '@/models/product';
 import { NextResponse } from 'next/server';
 
-export async function POST(req: any) {
+export async function POST(request: Request) {
   const {
     slug,
     name,
@@ -16,8 +16,7 @@ export async function POST(req: any) {
     includes,
     gallery,
     others,
-  } = await req.json();
-
+  } = await request.json();
   await connectMongoDB();
   await Product.create({
     slug,
@@ -34,12 +33,11 @@ export async function POST(req: any) {
     others,
   });
 
-  return NextResponse.json({ message: 'Product created' }, { status: 201 });
+  return NextResponse.json({ Message: 'Success' }, { status: 201 });
 }
 
 export async function GET() {
   await connectMongoDB();
   const products = await Product.find();
-
   return NextResponse.json({ products });
 }

@@ -33,6 +33,11 @@ export interface ProductProps {
       desktop: string;
     };
   };
+  image: {
+    mobile: string;
+    tablet: string;
+    desktop: string;
+  };
 }
 
 export interface CustomButtonProps {

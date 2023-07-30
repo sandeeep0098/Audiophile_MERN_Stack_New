@@ -17,8 +17,16 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <nav className="wrapper">
-        <div className="lefticon">
-          <Image src={logo} width={143} height={25} alt="logo"></Image>
+        <div className="left">
+          <Link href="/">
+            <Image
+              src={logo}
+              width={143}
+              height={25}
+              alt="logo"
+              className="logo"
+            ></Image>
+          </Link>
         </div>
         <div className="center">
           <Link className="navbarlinks" href="/">

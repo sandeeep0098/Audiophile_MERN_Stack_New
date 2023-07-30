@@ -37,9 +37,9 @@ export async function POST(req: any) {
   return NextResponse.json({ message: 'Product created' }, { status: 201 });
 }
 
-// export async function GET() {
-//   await connectMongoDB();
-//   const products = await Product.find();
+export async function GET() {
+  await connectMongoDB();
+  const products = await Product.find();
 
-//   return NextResponse.json({ products });
-// }
+  return NextResponse.json({ products });
+}

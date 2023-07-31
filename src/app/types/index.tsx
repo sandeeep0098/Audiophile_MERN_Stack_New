@@ -1,3 +1,5 @@
+import { MouseEventHandler } from "react";
+
 export interface ParamProps {
   params: {
     categories: string;
@@ -45,4 +47,6 @@ export interface CustomButtonProps {
   type: string;
   className?: string;
   name?: string;
+  handleClick?:
+  MouseEventHandler<HTMLButtonElement > ;
 }

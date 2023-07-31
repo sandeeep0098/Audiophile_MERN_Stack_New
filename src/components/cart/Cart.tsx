@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Cart.scss';
 import ProductLinkPrimaryButton from '../UI/productLinkPrimaryButton';
 import blackheadphones from '../../../public/assets/cart/image-xx99-mark-two-headphones.jpg';
 import Image from 'next/image';
 import whiteheadphones from '../../../public/assets/cart/image-xx59-headphones.jpg';
-import speaker from '../../../public/assets/cart/image-yx1-earphones.jpg';
+import speaker from '../../../public/assets/cart/image-yx1-earphones.jpg'
 
-const Cart = () => {
+const Cart = ({showCartHandler}: any) => {
+  
   return (
     <div className="cart">
       <div className="top">
@@ -81,11 +82,28 @@ const Cart = () => {
           <h5>$ 1,234</h5>
         </div>
 
-        <ProductLinkPrimaryButton
+        <div className="cart-buttons">
+       
+              <ProductLinkPrimaryButton 
+          path=""
+            type="primary"
+            name='Cancel'
+            className="button"
+            handleClick={showCartHandler}
+        />
+           <ProductLinkPrimaryButton
           path="/"
           type="primary"
-          className="button-demo"
-        />
+            className="button"
+            name="Checkout"
+          
+          />
+         
+
+        </div>
+
+       
+        
       </div>
     </div>
   );

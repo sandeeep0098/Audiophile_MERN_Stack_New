@@ -97,12 +97,15 @@
         letter-spacing: 0;
       }
     }
-    
-    .button-demo {
+    .cart-buttons{
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    .button {
       width: 27rem;
       display: flex;
       justify-content: center;
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
     }
   }
-}
+}}

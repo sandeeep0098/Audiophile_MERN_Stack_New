@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import "./ProductListItem.scss"
 import Link from 'next/link'
@@ -6,6 +7,10 @@ import headphoneImg from "../../../public/assets/product-xx59-headphones/desktop
 import ProductLinkPrimaryButton from '../UI/productLinkPrimaryButton'
 
 const ProductListItem = () => {
+
+  const addItemHandler = () => {
+    alert("items Will be added to Cart")
+  }
   return (
     <div className='productlistitem'>
       <Link href="/" className='back-link'>Go Back</Link>
@@ -25,8 +30,17 @@ const ProductListItem = () => {
                         
                         <h2>XX99 Mark II
 Headphones </h2>
-                        <p>The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.</p>
-                        <ProductLinkPrimaryButton path="/" type="primary" />
+            <p>The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.</p>
+            <div className="buttons">
+              <div className="inc_dec_button">
+
+               <button>-</button>
+            <div className="demo">4</div>
+            <button>+</button>
+            
+              </div>
+            <ProductLinkPrimaryButton path="" type="primary" name='Add TO Cart' handleClick={addItemHandler} />
+             </div>
                       </div>
                     </div>
       </div>

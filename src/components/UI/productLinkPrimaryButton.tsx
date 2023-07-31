@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import './productLinkPrimaryButton.scss';
 import Link from 'next/link';
@@ -8,6 +9,10 @@ const ProductLinkPrimaryButton: React.FC<CustomButtonProps> = ({
   type,
   className,
   name,
+  handleClick,
+
+   
+  
 }) => {
   const productLinkTypeClass =
     type === 'primary'
@@ -16,12 +21,18 @@ const ProductLinkPrimaryButton: React.FC<CustomButtonProps> = ({
       ? 'dark'
       : type === 'transparent'
       ? 'transparent'
-      : 'primary';
-
+          : 'primary';
+  
+  const handleButtonClick = (event:any) => {
+    if (handleClick) {
+      handleClick(event);
+    }
+  };
   return (
     <Link
       href={path}
       className={`productLink ${productLinkTypeClass} ${className}`}
+      onClick={handleButtonClick}
     >
       {name ? name : 'See Product'}
     </Link>

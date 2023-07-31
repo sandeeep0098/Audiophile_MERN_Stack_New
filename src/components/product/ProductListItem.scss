@@ -28,6 +28,8 @@
         border-radius: 1rem;
         }
 
+      
+}
     }
       .right {
           width: 50%;
@@ -48,6 +50,26 @@
               color: gray;
               margin-bottom: 5rem;
             }
+            .buttons{
+  display: flex;
+ 
+  gap: 2rem;
+
+  .inc_dec_button{
+    display: flex;
+    button {
+          border: none;
+          width: 4rem;
+          height: 4.8rem;
+        }}
+        .demo {
+          background-color: #efefef;
+          height: 4.8rem;
+          width: 4rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
           }
         }
   }

@@ -1,3 +1,138 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/app/page.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.home {
+  background-color: var(--colorGreyDark);
+}
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/components/layout/header.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.header {
+  background-color: var(--colorGreyDark);
+  max-width: 111rem;
+  height: 60rem;
+  display: flex;
+  margin: auto;
+}
+.header .left {
+  width: 40%;
+  height: 100%;
+}
+.header .left .left-container {
+  height: 35rem;
+  width: 40rem;
+  display: flex;
+  margin: auto;
+  margin-top: 16.5rem;
+  color: white;
+  flex-direction: column;
+}
+.header .left .left-container h2 {
+  font-size: 14px;
+  width: 21rem;
+  height: 2rem;
+  font-weight: normal;
+  color: gray;
+  letter-spacing: 10px;
+  margin-bottom: 0;
+}
+.header .left .left-container h1 {
+  width: 40rem;
+  height: 12rem;
+  font-weight: bold;
+  font-size: 56px;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+.header .left .left-container p {
+  height: 7.5rem;
+  width: 35rem;
+  line-height: 25px;
+  font-size: 15px;
+  font-weight: normal;
+}
+.header .left .left-container .button {
+  margin-top: 1rem;
+  width: 16rem;
+  display: flex;
+  justify-content: center;
+}
+.header .left .left-container .link {
+  margin-top: 1rem;
+  width: 16rem;
+  height: 5rem;
+  background-color: var(--primaryColor);
+  text-decoration: none;
+  color: var(--colorWhite);
+  font-weight: var(--fontWeightBold);
+  border-radius: 1px;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+.header .left .left-container .link:hover {
+  background-color: var(--primaryColorLight);
+}
+.header .left .left-container .link div {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1.2rem 2.6rem;
+  font-size: 1.3rem;
+}
+.header .right {
+  width: 60%;
+}
+.header .right .heroImg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background: none;
+  background-color: var(--colorGreyDark);
+}
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/components/UI/productLinkPrimaryButton.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.productLink {
+  font-size: 1.3rem;
+  font-weight: var(--fontWeightBold);
+  text-decoration: none;
+  padding: 1.2rem 2.6rem;
+  border-radius: 1px;
+  transition: all 0.1s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.primary {
+  background-color: var(--primaryColor);
+  color: var(--colorWhite);
+}
+
+.primary:hover {
+  background-color: var(--primaryColorLight);
+}
+
+.dark {
+  background-color: var(--colorBlack);
+  color: var(--colorWhite);
+  z-index: 1;
+}
+
+.dark:hover {
+  background-color: transparent;
+  color: var(--colorBlack);
+  border: 1px solid var(--colorBlack);
+}
+
+.transparent {
+  background-color: transparent;
+  color: var(--colorBlack);
+  border: 1px solid var(--colorBlack);
+}
+
+.transparent:hover {
+  background-color: var(--colorBlack);
+  color: var(--colorWhite);
+}
 /*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/components/layout/categoriesSection.scss ***!
   \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -60,47 +195,6 @@
   height: 3rem;
   width: 3rem;
   padding-top: -3px;
-}
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/components/layout/aboutus.scss ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.aboutus {
-  background-color: var(--colorWhite);
-  padding-bottom: 15rem;
-}
-.aboutus .wrapper {
-  display: flex;
-  max-width: 111rem;
-  margin: auto;
-}
-.aboutus .wrapper .left {
-  width: 50%;
-}
-.aboutus .wrapper .left .left-container {
-  margin-top: 12rem;
-  width: 45rem;
-}
-.aboutus .wrapper .left .left-container h1 {
-  font-weight: bold;
-  font-size: 40px;
-}
-.aboutus .wrapper .left .left-container h1 span {
-  color: var(--primaryColor);
-}
-.aboutus .wrapper .left .left-container p {
-  color: gray;
-}
-.aboutus .wrapper .right {
-  width: 50%;
-}
-.aboutus .wrapper .right .userimg {
-  border-radius: 10px;
-}
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/app/page.scss ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.home {
-  background-color: var(--colorGreyDark);
 }
 /*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/components/layout/productsection.scss ***!
@@ -242,132 +336,38 @@
   display: flex;
   justify-content: center;
 }
-/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/components/UI/productLinkPrimaryButton.scss ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.productLink {
-  font-size: 1.3rem;
-  font-weight: var(--fontWeightBold);
-  text-decoration: none;
-  padding: 1.2rem 2.6rem;
-  border-radius: 1px;
-  transition: all 0.1s;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/components/layout/aboutus.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.aboutus {
+  background-color: var(--colorWhite);
+  padding-bottom: 15rem;
 }
-
-.primary {
-  background-color: var(--primaryColor);
-  color: var(--colorWhite);
-}
-
-.primary:hover {
-  background-color: var(--primaryColorLight);
-}
-
-.dark {
-  background-color: var(--colorBlack);
-  color: var(--colorWhite);
-  z-index: 1;
-}
-
-.dark:hover {
-  background-color: transparent;
-  color: var(--colorBlack);
-  border: 1px solid var(--colorBlack);
-}
-
-.transparent {
-  background-color: transparent;
-  color: var(--colorBlack);
-  border: 1px solid var(--colorBlack);
-}
-
-.transparent:hover {
-  background-color: var(--colorBlack);
-  color: var(--colorWhite);
-}
-/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/components/layout/header.scss ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.header {
-  background-color: var(--colorGreyDark);
+.aboutus .wrapper {
+  display: flex;
   max-width: 111rem;
-  height: 60rem;
-  display: flex;
   margin: auto;
 }
-.header .left {
-  width: 40%;
-  height: 100%;
+.aboutus .wrapper .left {
+  width: 50%;
 }
-.header .left .left-container {
-  height: 35rem;
-  width: 40rem;
-  display: flex;
-  margin: auto;
-  margin-top: 16.5rem;
-  color: white;
-  flex-direction: column;
+.aboutus .wrapper .left .left-container {
+  margin-top: 12rem;
+  width: 45rem;
 }
-.header .left .left-container h2 {
-  font-size: 14px;
-  width: 21rem;
-  height: 2rem;
-  font-weight: normal;
-  color: gray;
-  letter-spacing: 10px;
-  margin-bottom: 0;
-}
-.header .left .left-container h1 {
-  width: 40rem;
-  height: 12rem;
+.aboutus .wrapper .left .left-container h1 {
   font-weight: bold;
-  font-size: 56px;
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
+  font-size: 40px;
 }
-.header .left .left-container p {
-  height: 7.5rem;
-  width: 35rem;
-  line-height: 25px;
-  font-size: 15px;
-  font-weight: normal;
+.aboutus .wrapper .left .left-container h1 span {
+  color: var(--primaryColor);
 }
-.header .left .left-container .button {
-  margin-top: 1rem;
-  width: 16rem;
-  display: flex;
-  justify-content: center;
+.aboutus .wrapper .left .left-container p {
+  color: gray;
 }
-.header .left .left-container .link {
-  margin-top: 1rem;
-  width: 16rem;
-  height: 5rem;
-  background-color: var(--primaryColor);
-  text-decoration: none;
-  color: var(--colorWhite);
-  font-weight: var(--fontWeightBold);
-  border-radius: 1px;
-  transition: all 0.1s;
-  cursor: pointer;
+.aboutus .wrapper .right {
+  width: 50%;
 }
-.header .left .left-container .link:hover {
-  background-color: var(--primaryColorLight);
-}
-.header .left .left-container .link div {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 1.2rem 2.6rem;
-  font-size: 1.3rem;
-}
-.header .right {
-  width: 60%;
-}
-.header .right .heroImg {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  background: none;
-  background-color: var(--colorGreyDark);
+.aboutus .wrapper .right .userimg {
+  border-radius: 10px;
 }

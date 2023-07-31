@@ -92,7 +92,7 @@ const Cart = ({showCartHandler}: any) => {
             handleClick={showCartHandler}
         />
            <ProductLinkPrimaryButton
-          path="/"
+          path="/Checkout"
           type="primary"
             className="button"
             name="Checkout"

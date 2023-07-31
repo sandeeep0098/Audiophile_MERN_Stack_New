@@ -1,0 +1,77 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/app/Checkout/Checkout.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.checkout {
+  background-color: var(--colorGreyMedium);
+}
+.checkout .back-link {
+  text-align: center;
+  padding: 5rem;
+}
+.checkout .back-link .link {
+  text-decoration: none;
+  color: gray;
+}
+.checkout .back-link .link:hover {
+  text-decoration: underline;
+}
+.checkout .wrapper {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding-bottom: 10rem;
+  max-width: 111rem;
+}
+.checkout .wrapper .main-form {
+  background-color: var(--colorWhite);
+  width: 73rem;
+  height: 120rem;
+  border-radius: 1rem;
+}
+.checkout .wrapper .main-form h2 {
+  font-weight: bold;
+  font-size: 3.2rem;
+  margin: 5rem 5rem 4rem;
+}
+.checkout .wrapper .main-form .main-form-wrapper {
+  max-width: 63rem;
+  height: 100rem;
+  margin: auto;
+}
+.checkout .wrapper .main-form .main-form-wrapper .input_billing_details h6 {
+  color: var(--primaryColor);
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.checkout .wrapper .main-form .main-form-wrapper .input_billing_details .wrapper {
+  gap: 1.5rem;
+}
+.checkout .wrapper .main-form .main-form-wrapper .input_billing_details .wrapper .fieldinput {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.checkout .wrapper .main-form .main-form-wrapper .input_billing_details .wrapper .fieldinput .field-input {
+  width: 31rem;
+  height: 5.6rem;
+  border-radius: 1rem;
+  border: 1px solid Grey;
+  transition: border-color 0.3s;
+  outline: none;
+}
+.checkout .wrapper .main-form .main-form-wrapper .input_billing_details .wrapper .fieldinput .field-input:focus, .checkout .wrapper .main-form .main-form-wrapper .input_billing_details .wrapper .fieldinput .field-input:hover {
+  border-color: var(--primaryColor);
+}
+.checkout .wrapper .main-form .main-form-wrapper .input_billing_details .wrapper .fieldinput .field-input::placeholder {
+  font-size: 1.4rem;
+  padding-left: 2rem;
+}
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/components/cart/Summary.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.summary {
+  width: 35rem;
+  background-color: var(--colorWhite);
+  height: 62rem;
+  border-radius: 1rem;
+}

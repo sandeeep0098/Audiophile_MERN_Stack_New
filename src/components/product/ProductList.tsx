@@ -6,6 +6,7 @@ import Image from 'next/image';
 import ProductLinkPrimaryButton from '../UI/productLinkPrimaryButton';
 import { useParams } from 'next/navigation';
 import { ProductProps } from '@/app/types/index';
+import Link from 'next/link';
 
 const ProductList: React.FC<{ products: ProductProps[] }> = ({ products }) => {
   const params = useParams();
@@ -35,6 +36,7 @@ const ProductList: React.FC<{ products: ProductProps[] }> = ({ products }) => {
                           <h6 className="newproduct">New Product</h6>
                         )}
                         <h2>{product.name}</h2>
+
                         <p>{product.description}</p>
                         <ProductLinkPrimaryButton path="/" type="primary" />
                       </div>

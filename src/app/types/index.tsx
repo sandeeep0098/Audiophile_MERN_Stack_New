@@ -1,20 +1,26 @@
-import { MouseEventHandler } from "react";
+import { MouseEventHandler } from 'react';
 
 export interface ParamProps {
   params: {
     categories: string;
   };
 }
-interface includeItems {
+export interface includeItems {
   quantity: number;
   item: string;
 }
 export interface ProductProps {
-  id: number;
-  name: string;
+  _id: number;
+  name: string | undefined;
+  slug: string;
   category: string;
   new: boolean;
   price: number;
+  image: {
+    mobile: string | undefined;
+    tablet: string | undefined;
+    desktop: string | undefined;
+  };
   description: string;
   features: string;
   includes: includeItems[];
@@ -35,18 +41,22 @@ export interface ProductProps {
       desktop: string;
     };
   };
-  image: {
-    mobile: string;
-    tablet: string;
-    desktop: string;
-  };
+  others: [
+    {
+      slug: string;
+      name: string;
+      image: {
+        mobile: string;
+        tablet: string;
+        desktop: string;
+      };
+    }
+  ];
 }
-
 export interface CustomButtonProps {
   path: string;
   type: string;
   className?: string;
   name?: string;
-  handleClick?:
-  MouseEventHandler<HTMLButtonElement > ;
+  handleClick?: MouseEventHandler<HTMLButtonElement>;
 }

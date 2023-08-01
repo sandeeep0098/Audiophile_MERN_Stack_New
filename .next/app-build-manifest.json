@@ -12,17 +12,17 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
+    "/[categories]/[slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/[categories]/[slug]/page.css",
+      "static/chunks/app/[categories]/[slug]/page.js"
+    ],
     "/[categories]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/[categories]/page.css",
       "static/chunks/app/[categories]/page.js"
-    ],
-    "/Checkout/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/Checkout/page.css",
-      "static/chunks/app/Checkout/page.js"
     ]
   }
 }

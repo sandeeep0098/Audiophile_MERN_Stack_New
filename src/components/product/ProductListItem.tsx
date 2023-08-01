@@ -14,10 +14,13 @@ const ProductListItem: React.FC<{ products: ProductProps[] }> = ({
 }) => {
   const params = useParams();
   const product = products.find((product) => product.slug === params.slug);
+  const handleGoBack = () => {
+    window.history.back();
+  };
 
   return (
     <div className="productlistitem">
-      <Link href="/" className="back-link">
+      <Link href="" className="back-link" onClick={handleGoBack}>
         Go Back
       </Link>
       <div className="section_one">

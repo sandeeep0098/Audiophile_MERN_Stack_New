@@ -1,8 +1,114 @@
-.summary{
-    width: 35rem;
+.summary {
+  background-color: var(--colorWhite);
+  border-radius: 1rem;
 
-    background-color: var(--colorWhite);
-    height: 62rem;
-    border-radius: 1rem;
+  width: 35rem;
 
+  height: 62rem;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 1.3rem;
+    .top {
+      width: 32rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      h6 {
+        font-weight: bold;
+        font-size: 18px;
+        letter-spacing: 1.3px;
+        margin-top: 2rem;
+      }
+    }
+    .center {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+
+      .cartItem {
+        width: 32rem;
+        height: 6.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .left {
+          display: flex;
+          gap: 2rem;
+          align-items: center;
+          .blackheadphones {
+            height: 6.4rem;
+            width: 6.4rem;
+            object-fit: cover;
+            border-radius: 10px;
+          }
+
+          .text-container {
+            display: flex;
+            gap: rem;
+            align-items: center;
+
+            h6 {
+              span {
+                color: gray;
+              }
+            }
+          }
+        }
+        .right {
+          display: flex;
+
+          .quantity {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+
+    .bottom {
+      width: 32rem;
+
+      .price-details {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 3rem;
+
+        .price-details-container {
+          .price-details-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 2.5rem;
+
+            h6 {
+              color: gray;
+            }
+
+            h5 {
+              font-size: 18px;
+              font-weight: bold;
+              letter-spacing: 0;
+            }
+          }
+        }
+        &:not(:last-of-type) {
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      .cart-buttons {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        .button {
+          width: 27rem;
+          display: flex;
+          justify-content: center;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
 }

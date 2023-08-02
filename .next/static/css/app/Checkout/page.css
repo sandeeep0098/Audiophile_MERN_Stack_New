@@ -43,15 +43,17 @@
   font-weight: bold;
   font-size: 1.3rem;
 }
-.checkout .wrapper .main-form .main-form-wrapper .input_billing_details .wrapper {
+.checkout .wrapper .main-form .main-form-wrapper .input_billing_details .wrapper-input {
+  display: flex;
   gap: 1.5rem;
+  flex-direction: column;
 }
-.checkout .wrapper .main-form .main-form-wrapper .input_billing_details .wrapper .fieldinput {
+.checkout .wrapper .main-form .main-form-wrapper .input_billing_details .wrapper-input .fieldinput {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-.checkout .wrapper .main-form .main-form-wrapper .input_billing_details .wrapper .fieldinput .field-input {
+.checkout .wrapper .main-form .main-form-wrapper .input_billing_details .wrapper-input .fieldinput .field-input {
   width: 31rem;
   height: 5.6rem;
   border-radius: 1rem;
@@ -59,10 +61,10 @@
   transition: border-color 0.3s;
   outline: none;
 }
-.checkout .wrapper .main-form .main-form-wrapper .input_billing_details .wrapper .fieldinput .field-input:focus, .checkout .wrapper .main-form .main-form-wrapper .input_billing_details .wrapper .fieldinput .field-input:hover {
+.checkout .wrapper .main-form .main-form-wrapper .input_billing_details .wrapper-input .fieldinput .field-input:focus, .checkout .wrapper .main-form .main-form-wrapper .input_billing_details .wrapper-input .fieldinput .field-input:hover {
   border-color: var(--primaryColor);
 }
-.checkout .wrapper .main-form .main-form-wrapper .input_billing_details .wrapper .fieldinput .field-input::placeholder {
+.checkout .wrapper .main-form .main-form-wrapper .input_billing_details .wrapper-input .fieldinput .field-input::placeholder {
   font-size: 1.4rem;
   padding-left: 2rem;
 }

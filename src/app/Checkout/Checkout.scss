@@ -1,86 +1,77 @@
-.checkout{
-    background-color: var(--colorGreyMedium);
+.checkout {
+  background-color: var(--colorGreyMedium);
 
-
-.back-link{
+  .back-link {
     text-align: center;
     padding: 5rem;
-.link{
-    text-decoration: none;
-    color: gray;
-    &:hover{
+    .link {
+      text-decoration: none;
+      color: gray;
+      &:hover {
         text-decoration: underline;
+      }
     }
   }
-}
-    .wrapper{
-            display: flex;
-            margin: 0 auto ;
-            justify-content: space-between;
-            padding-bottom: 10rem;
-            max-width: 111rem;
+  .wrapper {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding-bottom: 10rem;
+    max-width: 111rem;
 
-   
-                .main-form{
-    background-color: var(--colorWhite);
-    width: 73rem;
-    height: 120rem;
-    border-radius: 1rem;
-      h2{
+    .main-form {
+      background-color: var(--colorWhite);
+      width: 73rem;
+      height: 120rem;
+      border-radius: 1rem;
+      h2 {
         font-weight: bold;
         font-size: 3.2rem;
-        
-        margin: 5rem 5rem 4rem ; 
-       
-    }
 
-    .main-form-wrapper{
+        margin: 5rem 5rem 4rem;
+      }
+
+      .main-form-wrapper {
         max-width: 63rem;
         // background-color: aqua;
         height: 100rem;
         margin: auto;
-  
-        .input_billing_details{
-            h6{
-                color: var(--primaryColor);
-                font-weight: bold;
-font-size: 1.3rem;            }
 
+        .input_billing_details {
+          h6 {
+            color: var(--primaryColor);
+            font-weight: bold;
+            font-size: 1.3rem;
+          }
 
-.wrapper{
-    gap: 1.5rem;
-    .fieldinput{
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        .field-input{
-            width: 31rem;
-            height: 5.6rem;
-            border-radius: 1rem;
-           border: 1px solid Grey;
-            transition: border-color 0.3s;
-              outline: none;
-           &:focus, &:hover{
-            border-color: var(--primaryColor);
-           }
-           &::placeholder{
-            font-size: 1.4rem;
-            padding-left: 2rem;
-           }
-           
+          .wrapper-input {
+            display: flex;
+            gap: 1.5rem;
+            flex-direction: column;
+            .fieldinput {
+              display: flex;
+              flex-direction: column;
+              gap: 0.5rem;
+              .field-input {
+                width: 31rem;
+                height: 5.6rem;
+                border-radius: 1rem;
+                border: 1px solid Grey;
+                transition: border-color 0.3s;
+                outline: none;
+                &:focus,
+                &:hover {
+                  border-color: var(--primaryColor);
+                }
+                &::placeholder {
+                  font-size: 1.4rem;
+                  padding-left: 2rem;
+                }
+              }
+            }
+          }
         }
-
-        
+      }
     }
-}
-        }
-
-
-  
-
-}
-}
-
-}
-
+  }
 }

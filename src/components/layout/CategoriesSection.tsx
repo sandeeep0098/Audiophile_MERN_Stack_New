@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import './categoriesSection.scss';
@@ -6,7 +7,21 @@ import categoryPreviewHeadphones from '../../../public/assets/product-xx99-mark-
 import categoryPreviewSpeakers from '../../../public/assets/product-zx9-speaker/desktop/image-category-page-preview.png';
 import categoryPreviewEarphones from '../../../public/assets/product-yx1-earphones/desktop/image-category-page-preview-earphones.png';
 import Link from 'next/link';
-const CategoriesSection = () => {
+
+import { useParams } from 'next/navigation';
+import { ProductProps } from '@/app/types';
+
+const CategoriesSection: React.FC<{ products: ProductProps[] }> = ({
+  products,
+}) => {
+  const params = useParams();
+  // console.log(
+  //   products.map(
+  //     (product) => product.category === params.categories && product.name
+  //   )
+
+  // );
+  // const product = products.find((product) => product.slug === params.slug);
   return (
     <div className="categoriesSection">
       <div className="wrapper">
@@ -18,7 +33,7 @@ const CategoriesSection = () => {
           ></Image>
           <div className="links">
             <h6>Headphones</h6>
-            <Link className="link" href="/">
+            <Link className="link" href="">
               Shop <ChevronRightIcon className="icon" />{' '}
             </Link>
           </div>

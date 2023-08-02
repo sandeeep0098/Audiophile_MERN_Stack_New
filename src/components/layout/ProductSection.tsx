@@ -31,7 +31,7 @@ const ProductSection = () => {
                 deliver truly remarkable sound.
               </p>
               <ProductLinkPrimaryButton
-                path="/"
+                path="/speakers/zx9-speaker"
                 type="dark"
                 className="button"
               />
@@ -48,7 +48,10 @@ const ProductSection = () => {
         <div className="center-text">
           <h2>ZX7 SPEAKER</h2>
 
-          <ProductLinkPrimaryButton path="/" type="transparent" />
+          <ProductLinkPrimaryButton
+            path="/speakers/zx7-speaker"
+            type="transparent"
+          />
         </div>
       </div>
       <div className="bottom">
@@ -64,7 +67,7 @@ const ProductSection = () => {
             <h2>YX1 EARPHONES</h2>
             <ProductLinkPrimaryButton
               type="transparent"
-              path="/"
+              path="/earphones/yx1-earphones"
               className="button"
             />
           </div>

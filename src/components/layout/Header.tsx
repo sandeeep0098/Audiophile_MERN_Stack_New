@@ -7,7 +7,6 @@ import ProductLinkPrimaryButton from '../UI/productLinkPrimaryButton';
 const Header = () => {
   return (
     <div className="header">
-      <Link href="/headphones/xx99-mark-two-headphones">hello world</Link>
       <div className="left">
         <div className="left-container">
           <h2>new product</h2>
@@ -18,7 +17,7 @@ const Header = () => {
             made for the passionate music enthusiast.
           </p>
           <ProductLinkPrimaryButton
-            path="/"
+            path="/headphones/xx99-mark-two-headphones"
             type="primary"
             className="button"
           />

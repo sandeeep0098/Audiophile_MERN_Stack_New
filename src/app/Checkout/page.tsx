@@ -155,7 +155,11 @@ const CheckoutForm = () => {
         enteredCountry,
         enteredPhone,
         enteredAddress,
-        enteredPhone
+        enteredPhone,
+        enteredCvv,
+        enteredZip,
+        enteredEmail,
+        enteredCity
       );
     }
   };

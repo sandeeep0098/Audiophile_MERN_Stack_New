@@ -11,7 +11,6 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 const Navbar = () => {
   const [cartisopen, setCartIsOpen] = useState(false);
 
-
   const showCartHandler = () => {
     setCartIsOpen(!cartisopen);
   };
@@ -54,7 +53,7 @@ const Navbar = () => {
         {cartisopen && (
           <>
             <div className="backdrop" onClick={showCartHandler}></div>
-       <Cart showCartHandler={showCartHandler} />
+            <Cart showCartHandler={showCartHandler} />
           </>
         )}
       </nav>

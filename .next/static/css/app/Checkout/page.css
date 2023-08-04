@@ -1,73 +1,3 @@
-/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/app/Checkout/Checkout.scss ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.checkout {
-  background-color: var(--colorGreyMedium);
-}
-.checkout .back-link {
-  text-align: center;
-  padding: 5rem;
-}
-.checkout .back-link .link {
-  text-decoration: none;
-  color: gray;
-}
-.checkout .back-link .link:hover {
-  text-decoration: underline;
-}
-.checkout .wrapper {
-  display: flex;
-  margin: 0 auto;
-  justify-content: space-between;
-  padding-bottom: 10rem;
-  max-width: 111rem;
-}
-.checkout .wrapper .main-form {
-  background-color: var(--colorWhite);
-  width: 73rem;
-  height: 120rem;
-  border-radius: 1rem;
-}
-.checkout .wrapper .main-form h2 {
-  font-weight: bold;
-  font-size: 3.2rem;
-  margin: 5rem 5rem 4rem;
-}
-.checkout .wrapper .main-form .main-form-wrapper {
-  max-width: 63rem;
-  height: 100rem;
-  margin: auto;
-}
-.checkout .wrapper .main-form .main-form-wrapper .input_billing_details h6 {
-  color: var(--primaryColor);
-  font-weight: bold;
-  font-size: 1.3rem;
-}
-.checkout .wrapper .main-form .main-form-wrapper .input_billing_details .wrapper-input {
-  display: flex;
-  gap: 1.5rem;
-  flex-direction: column;
-}
-.checkout .wrapper .main-form .main-form-wrapper .input_billing_details .wrapper-input .fieldinput {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-.checkout .wrapper .main-form .main-form-wrapper .input_billing_details .wrapper-input .fieldinput .field-input {
-  width: 31rem;
-  height: 5.6rem;
-  border-radius: 1rem;
-  border: 1px solid Grey;
-  transition: border-color 0.3s;
-  outline: none;
-}
-.checkout .wrapper .main-form .main-form-wrapper .input_billing_details .wrapper-input .fieldinput .field-input:focus, .checkout .wrapper .main-form .main-form-wrapper .input_billing_details .wrapper-input .fieldinput .field-input:hover {
-  border-color: var(--primaryColor);
-}
-.checkout .wrapper .main-form .main-form-wrapper .input_billing_details .wrapper-input .fieldinput .field-input::placeholder {
-  font-size: 1.4rem;
-  padding-left: 2rem;
-}
 /*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/components/cart/Summary.scss ***!
   \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -213,4 +143,90 @@
 .transparent:hover {
   background-color: var(--colorBlack);
   color: var(--colorWhite);
+}
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/app/Checkout/CheckoutForm.module.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/* CheckoutForm.module.scss */
+.CheckoutForm_wrapper__DnWSU {
+  background-color: var(--colorGreyMedium);
+}
+
+.CheckoutForm_wrapper_form__J0v8L {
+  max-width: 111rem;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding-top: 1rem;
+  padding-bottom: 10rem;
+}
+
+.CheckoutForm_checkoutForm__IsT0N {
+  max-width: 73rem;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--colorWhite);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.CheckoutForm_formSection__MU5vP {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.CheckoutForm_formSection__MU5vP h1 {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.CheckoutForm_formSection__MU5vP h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--primaryColor);
+}
+
+.CheckoutForm_formGroup__HAM8H {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.CheckoutForm_formGroup__HAM8H label {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.CheckoutForm_formGroup__HAM8H input {
+  padding: 0.8rem;
+  font-size: 1.4rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+.CheckoutForm_formGroup__HAM8H input:focus {
+  border-color: var(--primaryColor);
+}
+
+.CheckoutForm_paymentMethod__LTIYP {
+  display: flex;
+  align-items: center;
+}
+.CheckoutForm_paymentMethod__LTIYP input[type=radio] {
+  margin-right: 0.5rem;
+}
+
+.CheckoutForm_emoneyDetails__Fb_41 {
+  margin-top: 1.5rem;
+}
+
+.CheckoutForm_back_link__DDgmh {
+  text-align: center;
+  padding: 5rem;
+}
+.CheckoutForm_back_link__DDgmh .CheckoutForm_link__cXoun {
+  text-decoration: none;
+  color: gray;
+}
+.CheckoutForm_back_link__DDgmh .CheckoutForm_link__cXoun:hover {
+  text-decoration: underline;
 }

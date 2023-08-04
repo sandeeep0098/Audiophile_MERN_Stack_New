@@ -5,7 +5,7 @@ import blackheadphones from '../../../public/assets/cart/image-xx99-mark-two-hea
 import Image from 'next/image';
 import whiteheadphones from '../../../public/assets/cart/image-xx59-headphones.jpg';
 import speaker from '../../../public/assets/cart/image-yx1-earphones.jpg';
-const Sumarry = () => {
+const Summary = () => {
   return (
     <div className="summary">
       <div className="wrapper">
@@ -110,4 +110,4 @@ const Sumarry = () => {
   );
 };
 
-export default Sumarry;
+export default Summary;

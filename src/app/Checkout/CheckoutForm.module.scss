@@ -1,0 +1,90 @@
+/* CheckoutForm.module.scss */
+
+.wrapper {
+  background-color: var(--colorGreyMedium);
+}
+
+.wrapper_form {
+  max-width: 111rem;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding-top: 1rem;
+  padding-bottom: 10rem;
+}
+
+.checkoutForm {
+  max-width: 73rem;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--colorWhite);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.formSection {
+  width: 100%;
+  margin-bottom: 3rem;
+
+  h1 {
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--primaryColor);
+  }
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  label {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  input {
+    padding: 0.8rem;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+
+  input:focus {
+    border-color: var(--primaryColor);
+  }
+}
+
+.paymentMethod {
+  display: flex;
+  align-items: center;
+
+  input[type='radio'] {
+    margin-right: 0.5rem;
+  }
+}
+
+.emoneyDetails {
+  margin-top: 1.5rem;
+}
+
+.back_link {
+  text-align: center;
+  padding: 5rem;
+  .link {
+    text-decoration: none;
+    color: gray;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -2,6 +2,7 @@ import Navbar from '@/components/layout/Navbar';
 import './globals.scss';
 import type { Metadata } from 'next';
 import Footer from '@/components/layout/footer';
+import ReduxProvider from '@/store/provider';
 
 export const metadata: Metadata = {
   title: 'Audiophile App',
@@ -16,9 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        {children}
-        <Footer />
+        <ReduxProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ReduxProvider>
       </body>
     </html>
   );

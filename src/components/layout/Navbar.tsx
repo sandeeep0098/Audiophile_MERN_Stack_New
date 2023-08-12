@@ -7,9 +7,16 @@ import logo from '../../../public/assets/shared/desktop/logo.svg';
 import { useState } from 'react';
 import Cart from '../cart/Cart';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { useAppDispatch } from '@/hooks/hooks';
+import { cartActions } from '@/store/cart-slice';
+import { useAppSelector } from '@/hooks/hooks';
 
 const Navbar = () => {
   const [cartisopen, setCartIsOpen] = useState(false);
+
+  const dispatch = useAppDispatch();
+
+  const cartQuantity = useAppSelector((state) => state.cart.totalQuantity);
 
   const showCartHandler = () => {
     setCartIsOpen(!cartisopen);
@@ -48,8 +55,10 @@ const Navbar = () => {
           <ShoppingCartOutlinedIcon
             className="righticonimg"
             onClick={showCartHandler}
-          />
+          />{' '}
+          <span>{cartQuantity}</span>
         </div>
+
         {cartisopen && (
           <>
             <div className="backdrop" onClick={showCartHandler}></div>

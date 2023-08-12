@@ -15,10 +15,12 @@
     justify-content: space-between;
     align-items: center;
     margin: auto;
+
     h6 {
       font-weight: bold;
       font-size: 18px;
       letter-spacing: 1.3px;
+      margin: 0;
     }
     p {
       color: gray;
@@ -28,19 +30,22 @@
   .center {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
 
+    justify-content: center;
+    margin-bottom: 0;
     .cartItem {
       width: 32rem;
-      height: 6.4rem;
+      margin-right: 4rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin-bottom: 2rem;
+
       .left {
         display: flex;
         gap: 2rem;
         align-items: center;
-        .blackheadphones {
+        .productImg {
           height: 6.4rem;
           width: 6.4rem;
           object-fit: cover;
@@ -53,6 +58,7 @@
           align-items: center;
 
           h6 {
+            margin: 0;
             span {
               color: gray;
             }
@@ -81,7 +87,7 @@
   .bottom {
     width: 32rem;
     margin: auto;
-    margin-bottom: 1rem;
+    margin-top: 0;
 
     .total-price {
       display: flex;
@@ -89,6 +95,7 @@
       justify-content: space-between;
 
       h6 {
+        margin: 0;
         color: gray;
       }
       h5 {
@@ -97,15 +104,16 @@
         letter-spacing: 0;
       }
     }
-    .cart-buttons{
+    .cart-buttons {
       display: flex;
       justify-content: space-between;
       gap: 1rem;
-    .button {
-      width: 27rem;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 2rem;
+      .button {
+        width: 27rem;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+      }
     }
   }
-}}
+}

@@ -46,7 +46,7 @@ const CategoriesSection: React.FC<{ products: ProductProps[] }> = ({
           ></Image>
           <div className="links">
             <h6>Speakers</h6>
-            <Link className="link" href="/earphones">
+            <Link className="link" href="/speakers">
               Shop <ChevronRightIcon className="icon" />{' '}
             </Link>
           </div>

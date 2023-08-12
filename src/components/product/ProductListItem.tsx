@@ -9,6 +9,9 @@ import ManageProduct from '../UI/ManageProduct';
 import { ProductProps } from '@/app/types';
 import { useParams } from 'next/navigation';
 
+import { cartActions } from '@/store/cart-slice';
+import { useAppDispatch } from '@/hooks/hooks';
+
 const ProductListItem: React.FC<{ products: ProductProps[] }> = ({
   products,
 }) => {
@@ -17,7 +20,18 @@ const ProductListItem: React.FC<{ products: ProductProps[] }> = ({
   const handleGoBack = () => {
     window.history.back();
   };
+  const dispatch = useAppDispatch();
 
+  const addToCartHandler = (e: any) => {
+    e.preventDefault();
+    dispatch(cartActions.addProductToCart(product));
+    console.log('product added successfully');
+  };
+  const removeFromCartHandler = (e: any) => {
+    e.preventDefault();
+    dispatch(cartActions.removeProductFromCart(product));
+    console.log('product removed successfully');
+  };
   return (
     <div className="productlistitem">
       <Link href="" className="back-link" onClick={handleGoBack}>
@@ -36,9 +50,19 @@ const ProductListItem: React.FC<{ products: ProductProps[] }> = ({
         <div className="right">
           <div className="right-container">
             {product?.new && <h6 className="newproduct">New Product</h6>}
-            <h2>{product?.name} </h2>
+            <h2>{product?.slug}</h2>
+
             <p>{product?.description}</p>
-            <ManageProduct />
+            <p className="productprice">$ {product?.price}</p>
+
+            <ProductLinkPrimaryButton
+              path=""
+              type="primary"
+              name="Add TO Cart"
+              handleClick={addToCartHandler}
+            />
+            <button onClick={addToCartHandler}>Add To Cart</button>
+            <button onClick={removeFromCartHandler}>Remove from Cart</button>
           </div>
         </div>
       </div>

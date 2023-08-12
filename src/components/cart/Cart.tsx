@@ -1,109 +1,85 @@
 import React, { useState } from 'react';
 import './Cart.scss';
 import ProductLinkPrimaryButton from '../UI/productLinkPrimaryButton';
-import blackheadphones from '../../../public/assets/cart/image-xx99-mark-two-headphones.jpg';
 import Image from 'next/image';
-import whiteheadphones from '../../../public/assets/cart/image-xx59-headphones.jpg';
-import speaker from '../../../public/assets/cart/image-yx1-earphones.jpg'
+import { useAppDispatch, useAppSelector } from '@/hooks/hooks';
+import { cartActions } from '@/store/cart-slice';
+import { useParams } from 'next/navigation';
+import { ProductProps } from '@/app/types';
 
-const Cart = ({showCartHandler}: any) => {
-  
+const Cart: React.FC<{ products: ProductProps[] }> = ({
+  showCartHandler,
+  products,
+}: any) => {
+  const cartProducts = useAppSelector((state) => state.cart.products);
+  const cartQuantity = useAppSelector((state) => state.cart.totalQuantity);
+  const cartTotalAmont = useAppSelector((state) => state.cart.totalAmount);
+
+  const params = useParams();
+  const product = products?.find((product) => product.slug === params.slug);
+
+  const dispatch = useAppDispatch();
+
+  const addCartItemQuantityHandler = () => {
+    dispatch(cartActions.addProductToCart(product));
+  };
+  const removeCartQuantityItemHandler = () => {};
+
   return (
     <div className="cart">
       <div className="top">
-        <h6>Cart(3)</h6>
+        <h6>Cart({cartQuantity})</h6>
         <p>Remove all</p>
       </div>
-      <div className="center">
-        <div className="cartItem">
-          <div className="left">
-            <Image
-              src={blackheadphones}
-              alt="blackheadphones"
-              className="blackheadphones"
-            ></Image>
-            <div className="text-container">
-              <h6>
-                XX99MKll <br />
-                <span>$ 2999</span>
-              </h6>
+
+      {cartProducts.map((product) => (
+        <ul key={product._id} className="center">
+          <li className="cartItem">
+            <div className="left">
+              <Image
+                src={product.image.desktop}
+                alt={product.title}
+                className="productImg"
+                width={100}
+                height={100}
+              ></Image>
+              <div className="text-container">
+                <h6>
+                  {product.name.substring(0, 4)} <br />
+                  <span>$ {product.price}</span>
+                </h6>
+              </div>
             </div>
-          </div>
-          <div className="right">
-            <button>-</button>
-            <div className="demo">4</div>
-            <button>+</button>
-          </div>
-        </div>
-        <div className="cartItem">
-          <div className="left">
-            <Image
-              src={whiteheadphones}
-              alt="blackheadphones"
-              className="blackheadphones"
-            ></Image>
-            <div className="text-container">
-              <h6>
-                XX99MKll <br />
-                <span>$ 2999</span>
-              </h6>
+            <div className="right">
+              <button>-</button>
+              <div className="demo">4</div>
+              <button>+</button>
             </div>
-          </div>
-          <div className="right">
-            <button>-</button>
-            <div className="demo">4</div>
-            <button>+</button>
-          </div>
-        </div>
-        <div className="cartItem">
-          <div className="left">
-            <Image
-              src={speaker}
-              alt="blackheadphones"
-              className="blackheadphones"
-            ></Image>
-            <div className="text-container">
-              <h6>
-                XX99MKll <br />
-                <span>$ 2999</span>
-              </h6>
-            </div>
-          </div>
-          <div className="right">
-            <button>-</button>
-            <div className="demo">4</div>
-            <button>+</button>
-          </div>
-        </div>
-      </div>
+          </li>
+        </ul>
+      ))}
+
       <div className="bottom">
         <div className="total-price">
           <h6>Total</h6>
-          <h5>$ 1,234</h5>
+          <h5>{`$ ${cartTotalAmont}`}</h5>
         </div>
 
         <div className="cart-buttons">
-       
-              <ProductLinkPrimaryButton 
-          path=""
+          <ProductLinkPrimaryButton
+            path=""
             type="primary"
-            name='Cancel'
+            name="Cancel"
             className="button"
             handleClick={showCartHandler}
-        />
-           <ProductLinkPrimaryButton
-          path="/Checkout"
-          type="primary"
+          />
+          <ProductLinkPrimaryButton
+            path="/Checkout"
+            type="primary"
             className="button"
             name="Checkout"
-          
           />
-         
-
         </div>
-
-       
-        
       </div>
     </div>
   );

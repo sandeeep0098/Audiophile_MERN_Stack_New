@@ -20,7 +20,7 @@ const ProductList: React.FC<{ products: ProductProps[] }> = ({ products }) => {
             .map(
               (product) =>
                 product.category === params.categories && (
-                  <li key={product.id}>
+                  <li key={product._id}>
                     <div className="left">
                       <Image
                         src={product.image.desktop}

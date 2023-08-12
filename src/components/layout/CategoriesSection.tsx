@@ -33,7 +33,7 @@ const CategoriesSection: React.FC<{ products: ProductProps[] }> = ({
           ></Image>
           <div className="links">
             <h6>Headphones</h6>
-            <Link className="link" href="'/headphones">
+            <Link className="link" href="/headphones">
               Shop <ChevronRightIcon className="icon" />{' '}
             </Link>
           </div>

@@ -1,6 +1,9 @@
 .navbar {
   background-color: var(--colorGreyDark);
   height: 10rem;
+  position: sticky;
+  top: 0;
+  z-index: 3;
 
   .wrapper {
     background-color: var(--colorGreyDark);

@@ -63,6 +63,29 @@
     border-color: var(--primaryColor);
   }
 }
+.formGroupInvalid {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  label {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  input {
+    padding: 0.8rem;
+    font-size: 1.4rem;
+    border: 1px solid #b40e0e;
+    background-color: #fddddd;
+    border-radius: 4px;
+    outline: none;
+  }
+  input:focus {
+    border-color: #ff8800;
+    background-color: #fbe8d2;
+  }
+}
 
 .paymentMethod {
   display: flex;
@@ -87,4 +110,9 @@
       text-decoration: underline;
     }
   }
+}
+
+.errorText {
+  margin-top: -1rem;
+  color: #b40e0e;
 }

@@ -5,7 +5,7 @@
   background-color: var(--colorWhite);
   border-radius: 1rem;
   width: 35rem;
-  height: 62rem;
+  max-height: 62rem;
 }
 .summary .wrapper {
   display: flex;
@@ -29,6 +29,7 @@
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  text-transform: uppercase;
 }
 .summary .wrapper .center .cartItem {
   width: 32rem;
@@ -61,6 +62,7 @@
 }
 .summary .wrapper .center .cartItem .right .quantity {
   font-size: 2rem;
+  text-transform: lowercase;
 }
 .summary .wrapper .bottom {
   width: 32rem;
@@ -207,6 +209,28 @@
   border-color: var(--primaryColor);
 }
 
+.CheckoutForm_formGroupInvalid__EBx20 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.CheckoutForm_formGroupInvalid__EBx20 label {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.CheckoutForm_formGroupInvalid__EBx20 input {
+  padding: 0.8rem;
+  font-size: 1.4rem;
+  border: 1px solid #b40e0e;
+  background-color: #fddddd;
+  border-radius: 4px;
+  outline: none;
+}
+.CheckoutForm_formGroupInvalid__EBx20 input:focus {
+  border-color: #ff8800;
+  background-color: #fbe8d2;
+}
+
 .CheckoutForm_paymentMethod__LTIYP {
   display: flex;
   align-items: center;
@@ -229,4 +253,9 @@
 }
 .CheckoutForm_back_link__DDgmh .CheckoutForm_link__cXoun:hover {
   text-decoration: underline;
+}
+
+.CheckoutForm_errorText__gbDyE {
+  margin-top: -1rem;
+  color: #b40e0e;
 }

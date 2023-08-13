@@ -196,6 +196,41 @@
   background: none;
   background-color: var(--colorGreyDark);
 }
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/components/layout/aboutus.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.aboutus {
+  background-color: var(--colorWhite);
+  padding-bottom: 15rem;
+}
+.aboutus .wrapper {
+  display: flex;
+  max-width: 111rem;
+  margin: auto;
+}
+.aboutus .wrapper .left {
+  width: 50%;
+}
+.aboutus .wrapper .left .left-container {
+  margin-top: 12rem;
+  width: 45rem;
+}
+.aboutus .wrapper .left .left-container h1 {
+  font-weight: bold;
+  font-size: 40px;
+}
+.aboutus .wrapper .left .left-container h1 span {
+  color: var(--primaryColor);
+}
+.aboutus .wrapper .left .left-container p {
+  color: gray;
+}
+.aboutus .wrapper .right {
+  width: 50%;
+}
+.aboutus .wrapper .right .userimg {
+  border-radius: 10px;
+}
 /*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/components/layout/productsection.scss ***!
   \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -335,39 +370,4 @@
 .productsection .bottom .right .right-container .button {
   display: flex;
   justify-content: center;
-}
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/components/layout/aboutus.scss ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.aboutus {
-  background-color: var(--colorWhite);
-  padding-bottom: 15rem;
-}
-.aboutus .wrapper {
-  display: flex;
-  max-width: 111rem;
-  margin: auto;
-}
-.aboutus .wrapper .left {
-  width: 50%;
-}
-.aboutus .wrapper .left .left-container {
-  margin-top: 12rem;
-  width: 45rem;
-}
-.aboutus .wrapper .left .left-container h1 {
-  font-weight: bold;
-  font-size: 40px;
-}
-.aboutus .wrapper .left .left-container h1 span {
-  color: var(--primaryColor);
-}
-.aboutus .wrapper .left .left-container p {
-  color: gray;
-}
-.aboutus .wrapper .right {
-  width: 50%;
-}
-.aboutus .wrapper .right .userimg {
-  border-radius: 10px;
 }

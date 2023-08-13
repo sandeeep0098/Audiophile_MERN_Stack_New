@@ -90,6 +90,10 @@ h6 {
 .navbar {
   background-color: var(--colorGreyDark);
   height: 10rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
 .navbar .wrapper {
   background-color: var(--colorGreyDark);

@@ -17,6 +17,7 @@ const ProductListItem: React.FC<{ products: ProductProps[] }> = ({
 }) => {
   const params = useParams();
   const product = products.find((product) => product.slug === params.slug);
+  console.log(product + 'product from list item');
   const handleGoBack = () => {
     window.history.back();
   };
@@ -135,7 +136,10 @@ const ProductListItem: React.FC<{ products: ProductProps[] }> = ({
             ></Image>
 
             <h3>{product?.others[0].name}</h3>
-            <ProductLinkPrimaryButton path="/" type="primary" />
+            <ProductLinkPrimaryButton
+              path={product?.others[0].slug}
+              type="primary"
+            />
           </div>{' '}
           <div className="like_product">
             <Image
@@ -147,7 +151,10 @@ const ProductListItem: React.FC<{ products: ProductProps[] }> = ({
             ></Image>
 
             <h3>{product?.others[1].name}</h3>
-            <ProductLinkPrimaryButton path="/" type="primary" />
+            <ProductLinkPrimaryButton
+              path={product?.others[1].slug}
+              type="primary"
+            />
           </div>{' '}
           <div className="like_product">
             <Image
@@ -159,7 +166,10 @@ const ProductListItem: React.FC<{ products: ProductProps[] }> = ({
             ></Image>
 
             <h3>{product?.others[2].name}</h3>
-            <ProductLinkPrimaryButton path="/" type="primary" />
+            <ProductLinkPrimaryButton
+              path={product?.others[2].slug}
+              type="primary"
+            />
           </div>{' '}
         </div>
       </div>

@@ -14,15 +14,21 @@ const Cart: React.FC<{ products: ProductProps[] }> = ({
   const cartProducts = useAppSelector((state) => state.cart.products);
   const cartQuantity = useAppSelector((state) => state.cart.totalQuantity);
   const cartTotalAmont = useAppSelector((state) => state.cart.totalAmount);
+  // const addCartItemQuantityHandler = useAppSelector(
+  //   (state) => state.cart.totalAmount
+  // );
 
   const params = useParams();
-  const product = products?.find((product) => product.slug === params.slug);
+  const product = products?.find(
+    (product: any) => product.slug === params.slug
+  );
+  console.log(product + 'this is the product');
 
   const dispatch = useAppDispatch();
 
-  const addCartItemQuantityHandler = () => {
-    dispatch(cartActions.addProductToCart(product));
-  };
+  // const addCartItemQuantityHandler = () => {
+  //   dispatch(cartActions.addProductToCart(product));
+  // };
   const removeCartQuantityItemHandler = () => {};
 
   return (
@@ -52,7 +58,7 @@ const Cart: React.FC<{ products: ProductProps[] }> = ({
             </div>
             <div className="right">
               <button>-</button>
-              <div className="demo">4</div>
+              <div className="demo">0</div>
               <button>+</button>
             </div>
           </li>

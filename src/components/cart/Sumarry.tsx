@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 import { useAppDispatch, useAppSelector } from '@/hooks/hooks';
 
-const Summary = () => {
+const Summary = ({ onSubmit }) => {
   const cartProducts = useAppSelector((state) => state.cart.products);
   const cartQuantity = useAppSelector((state) => state.cart.totalQuantity);
   const cartTotalAmount = useAppSelector((state) => state.cart.totalAmount);
@@ -69,19 +69,20 @@ const Summary = () => {
             <div className="price-details-container">
               <div className="price-details-item">
                 <h6>Grand total</h6>
-                <h5>${grandTotalAmount.toFixed(0)}</h5>
+                <h5 className="totalamount">${grandTotalAmount.toFixed(0)}</h5>
               </div>
             </div>
           </div>
-
           <div className="cart-buttons">
             <ProductLinkPrimaryButton
               path="/Checkout"
               type="primary"
               className="button"
               name="Continue & Pay"
+              handleClick={onSubmit}
             />
           </div>
+          ;
         </div>
       </div>
     </div>

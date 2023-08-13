@@ -8,7 +8,8 @@
   background-color: var(--colorWhite);
   border-radius: 1rem;
   z-index: 4;
-
+  height: fit-content;
+  max-height: 50rem;
   .top {
     width: 32rem;
     display: flex;
@@ -102,6 +103,8 @@
         font-size: 18px;
         font-weight: bold;
         letter-spacing: 0;
+        margin: 0;
+        margin-bottom: 2rem;
       }
     }
     .cart-buttons {

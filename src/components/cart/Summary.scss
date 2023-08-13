@@ -3,8 +3,9 @@
   border-radius: 1rem;
 
   width: 35rem;
-
+  height: fit-content;
   max-height: 62rem;
+  overflow: auto;
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -22,6 +23,7 @@
         margin-top: 2rem;
       }
     }
+
     .center {
       display: flex;
       flex-direction: column;
@@ -34,6 +36,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 1.3rem;
         .left {
           display: flex;
           gap: 2rem;
@@ -92,6 +95,12 @@
               font-size: 18px;
               font-weight: bold;
               letter-spacing: 0;
+            }
+            .totalamount {
+              font-size: 18px;
+              font-weight: bold;
+              letter-spacing: 0;
+              color: var(--primaryColor);
             }
           }
         }

@@ -8,35 +8,75 @@ const CheckoutForm = () => {
   const [paymentMethod, setPaymentMethod] = useState('cash');
   const [enteredName, setEnteredName] = useState('');
   const [enteredNameTouched, setEnteredNameTouched] = useState(false);
+  const [enteredEmail, setEnteredEmail] = useState('');
+  const [enteredEmailTouched, setEnteredEmailTouched] = useState(false);
+  const [enteredPhoneNumberIsTouched, setEnteredPhoneNumberIsTouched] =
+    useState(false);
+  const [enteredPhoneNumber, setEnteredPhoneNumber] = useState('');
+
+  const phoneNumberPattern = /^[0-9]*$/;
 
   const enteredNameIsValid = enteredName.trim() !== '';
   const nameInputIsInvalid = !enteredNameIsValid && enteredNameTouched;
+  const enteredEmailIsValid =
+    enteredEmail.trim() !== '' && enteredEmail.includes('@');
+  const enteredEmailIsInvalid = !enteredEmailIsValid && enteredEmailTouched;
+  const enteredPhoneNumberIsValid =
+    enteredPhoneNumber.trim() !== '' &&
+    enteredPhoneNumber.length >= 10 &&
+    phoneNumberPattern.test(enteredPhoneNumber);
+  const enteredPhoneNumberIsInvalid =
+    !enteredPhoneNumberIsValid && enteredPhoneNumberIsTouched;
 
   let formIsValid = false;
 
-  if (enteredNameIsValid) {
+  if (enteredNameIsValid && enteredEmailIsValid) {
     formIsValid = true;
   }
 
   const nameInputChangeHandler = (e) => {
     setEnteredName(e.target.value);
   };
-
-  const nameInputBlurHandler = (e) => {
+  const emailInputChangeHandler = (e) => {
+    setEnteredEmail(e.target.value);
+  };
+  const emailInputBlurHandler = () => {
+    setEnteredEmailTouched(true);
+  };
+  const nameInputBlurHandler = () => {
     setEnteredNameTouched(true);
+  };
+  const phoneInputChangeHandler = (e) => {
+    setEnteredPhoneNumber(e.target.value);
+  };
+  const phoneInputBlurHandler = () => {
+    setEnteredPhoneNumberIsTouched(true);
   };
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
     setEnteredNameTouched(true);
-    if (!enteredNameIsValid) {
+    setEnteredEmailTouched(true);
+    setEnteredPhoneNumberIsTouched(true);
+    if (
+      !enteredNameIsValid ||
+      !enteredEmailIsValid ||
+      !enteredPhoneNumberIsValid
+    ) {
       return;
     }
-    console.log('form submited');
+    console.log('form submitted');
     console.log(enteredName);
+    console.log(enteredEmail);
+    console.log(enteredPhoneNumber);
     setEnteredName('');
     setEnteredNameTouched(false);
+    setEnteredEmail('');
+    setEnteredEmailTouched(false);
+    setEnteredPhoneNumber('');
+    setEnteredPhoneNumberIsTouched(false);
   };
+
   const handlePaymentMethodChange = (event) => {
     setPaymentMethod(event.target.value);
   };
@@ -46,6 +86,12 @@ const CheckoutForm = () => {
   };
 
   const nameInputClasses = nameInputIsInvalid
+    ? `${styles.formGroup} ${styles.formGroupInvalid}`
+    : styles.formGroup;
+  const emailInputClasses = enteredEmailIsInvalid
+    ? `${styles.formGroup} ${styles.formGroupInvalid}`
+    : styles.formGroup;
+  const phoneInputClasses = enteredPhoneNumberIsInvalid
     ? `${styles.formGroup} ${styles.formGroupInvalid}`
     : styles.formGroup;
   return (
@@ -71,25 +117,42 @@ const CheckoutForm = () => {
                   onBlur={nameInputBlurHandler}
                   value={enteredName}
                 />
+                {nameInputIsInvalid && (
+                  <p className={styles.errorText}>Name must not be empty.</p>
+                )}
               </div>
-              {nameInputIsInvalid && (
-                <p className={styles.errorText}>Name must not be empty.</p>
-              )}
-              <div className={styles.formGroup}>
-                <label htmlFor="phone">Phone No:</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  placeholder="Enter your phone number"
-                />
-              </div>
-              <div className={styles.formGroup}>
+
+              <div className={emailInputClasses}>
                 <label htmlFor="email">Email Address:</label>
                 <input
                   type="email"
                   id="email"
                   placeholder="Enter your email address"
+                  onChange={emailInputChangeHandler}
+                  onBlur={emailInputBlurHandler}
+                  value={enteredEmail}
                 />
+                {enteredEmailIsInvalid && (
+                  <p className={styles.errorText}>
+                    Email must include @ and should not be empty.
+                  </p>
+                )}
+              </div>
+              <div className={phoneInputClasses}>
+                <label htmlFor="phone">Phone No:</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="Enter your phone number"
+                  value={enteredPhoneNumber}
+                  onChange={phoneInputChangeHandler}
+                  onBlur={phoneInputBlurHandler}
+                />
+                {enteredPhoneNumberIsInvalid && (
+                  <p className={styles.errorText}>
+                    Phone No Should Contain 10 digits
+                  </p>
+                )}
               </div>
             </div>
 
@@ -143,11 +206,39 @@ const CheckoutForm = () => {
                   />
                   <label htmlFor="emoney">E-Money</label>
                 </div>
+                {paymentMethod === 'emoney' && (
+                  <div className={styles.emoneyDetails}>
+                    <div className={styles.formGroup}>
+                      <label htmlFor="cardno">Enter Card No:</label>
+                      <input
+                        type="text"
+                        id="cardno"
+                        placeholder="Enter your card number"
+                      />
+                    </div>
+                    <div className={styles.formGroup}>
+                      <label htmlFor="cvv">CVV:</label>
+                      <input type="text" id="cvv" placeholder="Enter the CVV" />
+                    </div>
+                    <div className={styles.formGroup}>
+                      <label htmlFor="cardHolderName">
+                        Card Holder's Name:
+                      </label>
+                      <input
+                        type="text"
+                        id="cardHolderName"
+                        placeholder="Enter the card holder's name"
+                      />
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit" onSubmit={formSubmitHandler}>
+              Submit
+            </button>
           </form>
-          <Summary />
+          <Summary onSubmit={formSubmitHandler} />
         </div>
       </div>
     </>

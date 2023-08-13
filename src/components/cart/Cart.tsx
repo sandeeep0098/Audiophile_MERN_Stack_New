@@ -31,6 +31,14 @@ const Cart: React.FC<{ products: ProductProps[] }> = ({
   // };
   const removeCartQuantityItemHandler = () => {};
 
+  if (cartProducts.length === 0) {
+    return (
+      <div className="empty-cart">
+        <p>Oops! You have 0 items in your cart.</p>
+      </div>
+    );
+  }
+
   return (
     <div className="cart">
       <div className="top">

@@ -21,11 +21,12 @@
       font-weight: bold;
       font-size: 18px;
       letter-spacing: 1.3px;
-      margin: 0;
+      margin: 3rem 0 1rem 0;
     }
     p {
       color: gray;
       text-decoration: underline;
+      margin: 3rem 0 1rem 0;
     }
   }
   .center {
@@ -118,5 +119,18 @@
         margin-bottom: 2rem;
       }
     }
+  }
+}
+
+.empty-cart {
+  text-align: center;
+  font-size: 2rem;
+  img {
+    object-fit: cover;
+    margin-bottom: 0;
+  }
+  p {
+    margin-top: -3rem;
+    color: rgb(227, 96, 96);
   }
 }

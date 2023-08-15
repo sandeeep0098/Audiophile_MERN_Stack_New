@@ -34,7 +34,7 @@ const Summary = ({ onSubmit }) => {
                 <div className="text-container">
                   <h6>
                     {product.name.substring(0, 4)} <br />
-                    <span>{product.price}</span>
+                    <span>${product.price}</span>
                   </h6>
                 </div>
               </div>
@@ -82,7 +82,6 @@ const Summary = ({ onSubmit }) => {
               handleClick={onSubmit}
             />
           </div>
-          ;
         </div>
       </div>
     </div>

@@ -6,6 +6,7 @@ import { useAppDispatch, useAppSelector } from '@/hooks/hooks';
 import { cartActions } from '@/store/cart-slice';
 import { useParams } from 'next/navigation';
 import { ProductProps } from '@/app/types';
+import ManageProduct from '../UI/ManageProduct';
 
 const Cart: React.FC<{ products: ProductProps[] }> = ({
   showCartHandler,
@@ -14,31 +15,6 @@ const Cart: React.FC<{ products: ProductProps[] }> = ({
   const cartProducts = useAppSelector((state) => state.cart.products);
   const cartQuantity = useAppSelector((state) => state.cart.totalQuantity);
   const cartTotalAmont = useAppSelector((state) => state.cart.totalAmount);
-  // const addCartItemQuantityHandler = useAppSelector(
-  //   (state) => state.cart.totalAmount
-  // );
-
-  const params = useParams();
-  // const product = products?.find(
-  //   (product: any) => product.slug === params.slug
-  // // );
-  // console.log(product + 'this is the product');
-
-  const dispatch = useAppDispatch();
-
-  const addCartItemQuantityHandler = (product: any) => {
-    dispatch(cartActions.addProductToCart(product));
-  };
-  const removeCartQuantityItemHandler = () => {};
-
-  // if (cartProducts.length === 0) {
-  //   return (
-  //     <div className="empty-cart">
-  //       <p>Oops! You have 0 items in your cart.</p>
-  //     </div>
-  //   );
-  // }
-
   const emptyCart = cartProducts.length === 0;
 
   if (!emptyCart) {

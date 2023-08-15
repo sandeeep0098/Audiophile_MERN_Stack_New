@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import './ProductListItem.scss';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -11,12 +11,15 @@ import { useParams } from 'next/navigation';
 
 import { cartActions } from '@/store/cart-slice';
 import { useAppDispatch } from '@/hooks/hooks';
+import { useAppSelector } from '@/hooks/hooks';
 
 const ProductListItem: React.FC<{ products: ProductProps[] }> = ({
   products,
 }) => {
   const params = useParams();
+  const cartProducts = useAppSelector((state) => state.cart.products);
   const product = products.find((product) => product.slug === params.slug);
+  const [cartItemQuantiy, setCartItemQuantity] = useState(0);
   console.log(product + 'product from list item');
   const handleGoBack = () => {
     window.history.back();
@@ -25,13 +28,26 @@ const ProductListItem: React.FC<{ products: ProductProps[] }> = ({
 
   const addToCartHandler = (e: any) => {
     e.preventDefault();
+    setCartItemQuantity((prev) => prev + 1);
     dispatch(cartActions.addProductToCart(product));
+
     console.log('product added successfully');
   };
   const removeFromCartHandler = (e: any) => {
     e.preventDefault();
-    dispatch(cartActions.removeProductFromCart(product));
-    console.log('product removed successfully');
+    if (cartProducts.length === 0) {
+      return;
+    }
+    {
+      dispatch(cartActions.removeProductFromCart(product));
+      setCartItemQuantity((prev) => prev - 1);
+      console.log('product removed successfully');
+    }
+  };
+  const removeAllProductsFromCart = (e: any) => {
+    e.preventDefault();
+    setCartItemQuantity((prev) => 0);
+    dispatch(cartActions.removeAllProducts(product));
   };
   return (
     <div className="productlistitem">
@@ -52,18 +68,26 @@ const ProductListItem: React.FC<{ products: ProductProps[] }> = ({
           <div className="right-container">
             {product?.new && <h6 className="newproduct">New Product</h6>}
             <h2>{product?.slug}</h2>
-
             <p>{product?.description}</p>
             <p className="productprice">$ {product?.price}</p>
-
             <ProductLinkPrimaryButton
               path=""
               type="primary"
               name="Add TO Cart"
               handleClick={addToCartHandler}
-            />
+            />{' '}
+            <br />
+            <br />
+            <div>
+              <button onClick={removeFromCartHandler}>-</button>
+              <span>{cartItemQuantiy}</span>
+              <button onClick={addToCartHandler}>+</button>
+            </div>
             <button onClick={addToCartHandler}>Add To Cart</button>
             <button onClick={removeFromCartHandler}>Remove from Cart</button>
+            <button onClick={removeAllProductsFromCart}>
+              Remove all products
+            </button>
           </div>
         </div>
       </div>

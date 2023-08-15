@@ -29,6 +29,7 @@ const ProductListItem: React.FC<{ products: ProductProps[] }> = ({
 
   const addToCartHandler = (e: any) => {
     e.preventDefault();
+
     setCartItemQuantity((prev) => prev + 1);
     dispatch(cartActions.addProductToCart(product));
 

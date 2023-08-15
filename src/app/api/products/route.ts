@@ -38,7 +38,7 @@ import { NextResponse } from 'next/server';
 
 export async function GET() {
   await connectMongoDB();
-  const products = await Product.find().lean();
+  const products = await Product.find();
 
   return NextResponse.json({ products });
 }

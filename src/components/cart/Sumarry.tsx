@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import './Summary.scss';
 import ProductLinkPrimaryButton from '../UI/productLinkPrimaryButton';

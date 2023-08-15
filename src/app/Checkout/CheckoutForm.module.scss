@@ -93,6 +93,41 @@
 
   input[type='radio'] {
     margin-right: 0.5rem;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 1.4rem;
+    height: 1.4rem;
+    border: 2px solid var(--primaryColor);
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    transition: background-color 0.3s, border-color 0.3s;
+    cursor: pointer;
+  }
+
+  input[type='radio']:checked {
+    border-color: var(--primaryColor);
+    background-color: var(--primaryColor);
+  }
+
+  input[type='radio']:checked::before {
+    content: '';
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.3s;
+  }
+
+  input[type='radio']:focus {
+    outline: none;
+    border-color: var(--primaryColor);
   }
 }
 

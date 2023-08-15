@@ -5,7 +5,7 @@ import checkOutIcon from '../../../public/assets/checkout/icon-order-confirmatio
 import Image from 'next/image';
 import ProductLinkPrimaryButton from '../UI/productLinkPrimaryButton';
 
-const OderDetailModalComponent = ({ modalHandler }) => {
+const OderDetailModalComponent = ({ modalHandler, orderDetailModal }) => {
   const closeOrderModalHandler = () => {
     modalHandler(false);
   };
@@ -13,7 +13,9 @@ const OderDetailModalComponent = ({ modalHandler }) => {
   return (
     <>
       <div className="backdrop" onClick={closeOrderModalHandler}>
-        <div className="modal-container">
+        <div
+          className={`modal-container ${orderDetailModal ? 'animation' : ''}`}
+        >
           <Image src={checkOutIcon} alt="checkout"></Image>
 
           <h2>

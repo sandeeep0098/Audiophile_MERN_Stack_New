@@ -11,6 +11,7 @@ import ProductListItem from '../product/ProductListItem';
 
 const Cart: React.FC<{ products: ProductProps[] }> = ({
   showCartHandler,
+  cartisopen,
   products,
 }: any) => {
   const cartProducts = useAppSelector((state) => state.cart.products);
@@ -20,7 +21,7 @@ const Cart: React.FC<{ products: ProductProps[] }> = ({
 
   if (!emptyCart) {
     return (
-      <div className="cart">
+      <div className={`cart ${cartisopen ? 'cart-open' : ''}`}>
         <div className="top">
           <h6>Cart({cartQuantity})</h6>
           <p>Remove all</p>

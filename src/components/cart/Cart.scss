@@ -10,6 +10,8 @@
   z-index: 4;
   height: fit-content;
   max-height: 50rem;
+  opacity: 0;
+  animation: slideIn 0.3s ease-in-out forwards;
   .top {
     width: 32rem;
     display: flex;
@@ -132,5 +134,20 @@
   p {
     margin-top: -3rem;
     color: rgb(227, 96, 96);
+  }
+}
+.cart-open {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

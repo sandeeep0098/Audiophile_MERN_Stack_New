@@ -62,7 +62,7 @@ const Navbar = () => {
         {cartisopen && (
           <>
             <div className="backdrop" onClick={showCartHandler}></div>
-            <Cart showCartHandler={showCartHandler} />
+            <Cart showCartHandler={showCartHandler} cartisopen={cartisopen} />
           </>
         )}
       </nav>

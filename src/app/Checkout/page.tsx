@@ -82,6 +82,7 @@ const CheckoutForm = () => {
       enteredCityIsValid &&
       enteredZipCodeIsValid &&
       enteredCountryIsValid) ||
+    paymentMethod === 'cash' ||
     paymentMethod === 'emoney' ||
     (enteredCardNoIsValid && enteredCvvIsValid && enteredCardHolderNameIsValid)
   ) {
@@ -174,7 +175,7 @@ const CheckoutForm = () => {
     setEnteredCardNoTouched(true);
     setEnteredCvvTouched(true);
     setEnteredCardHolderNameTouched(true);
-    setOrderDetailModal(true);
+
     if (
       !enteredNameIsValid ||
       !enteredEmailIsValid ||
@@ -191,9 +192,16 @@ const CheckoutForm = () => {
       return;
     }
     console.log('form submitted');
-    console.log(enteredName);
-    console.log(enteredEmail);
-    console.log(enteredPhoneNumber);
+    console.log('Entered Name:', enteredName);
+    console.log('Entered Email:', enteredEmail);
+    console.log('Entered Phone Number:', enteredPhoneNumber);
+    console.log('Entered Address:', enteredAddress);
+    console.log('Entered City:', enteredCity);
+    console.log('Entered Zip Code:', enteredZipCode);
+    console.log('Entered Country:', enteredCountry);
+    console.log('Entered Card No:', enteredCardNo);
+    console.log('Entered CVV:', enteredCvv);
+    console.log('Entered Card Holder Name:', enteredCardHolderName);
     setEnteredName('');
     setEnteredNameTouched(false);
     setEnteredEmail('');
@@ -214,6 +222,7 @@ const CheckoutForm = () => {
     setEnteredCvvTouched(false);
     setEnteredCardHolderName('');
     setEnteredCardHolderNameTouched(false);
+    setOrderDetailModal(true);
   };
 
   const handlePaymentMethodChange = (event) => {
@@ -266,8 +275,11 @@ const CheckoutForm = () => {
 
   return (
     <>
-      {orderDetailModal && (
-        <OderDetailModalComponent modalHandler={setOrderDetailModal} />
+      {orderDetailModal && formIsValid && (
+        <OderDetailModalComponent
+          modalHandler={setOrderDetailModal}
+          orderDetailModal={orderDetailModal}
+        />
       )}
       <div className={styles.wrapper}>
         <div className={styles.back_link}>

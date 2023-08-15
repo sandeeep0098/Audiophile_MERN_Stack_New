@@ -7,6 +7,7 @@ import { cartActions } from '@/store/cart-slice';
 import { useParams } from 'next/navigation';
 import { ProductProps } from '@/app/types';
 import ManageProduct from '../UI/ManageProduct';
+import ProductListItem from '../product/ProductListItem';
 
 const Cart: React.FC<{ products: ProductProps[] }> = ({
   showCartHandler,
@@ -43,11 +44,8 @@ const Cart: React.FC<{ products: ProductProps[] }> = ({
                   </h6>
                 </div>
               </div>
-              <div className="right">
-                <button>-</button>
-                <div className="demo">0</div>
-                <button>+</button>
-              </div>
+
+              <ManageProduct />
             </li>
           </ul>
         ))}

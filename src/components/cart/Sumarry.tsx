@@ -3,6 +3,7 @@ import './Summary.scss';
 import ProductLinkPrimaryButton from '../UI/productLinkPrimaryButton';
 import blackheadphones from '../../../public/assets/cart/image-xx99-mark-two-headphones.jpg';
 import Image from 'next/image';
+import { useState } from 'react';
 
 import { useAppDispatch, useAppSelector } from '@/hooks/hooks';
 

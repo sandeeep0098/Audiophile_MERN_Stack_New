@@ -19,6 +19,7 @@ const ProductListItem: React.FC<{ products: ProductProps[] }> = ({
   const params = useParams();
   const cartProducts = useAppSelector((state) => state.cart.products);
   const product = products.find((product) => product.slug === params.slug);
+  console.log(product);
   const [cartItemQuantiy, setCartItemQuantity] = useState(0);
   console.log(product + 'product from list item');
   const handleGoBack = () => {

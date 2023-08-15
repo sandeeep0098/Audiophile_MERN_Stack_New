@@ -156,6 +156,95 @@
   background-color: var(--colorBlack);
   color: var(--colorWhite);
 }
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[13].use[5]!./src/components/layout/oderDetailModalComponents.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.modal-open {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  height: 200%;
+  width: 100%;
+}
+.backdrop .modal-container {
+  background-color: var(--colorWhite);
+  border-radius: 1rem;
+  padding: 5rem;
+  width: 49rem;
+  height: 53rem;
+  position: absolute;
+  top: 5%;
+  left: 30%;
+  opacity: 0;
+  transform: translateY(-50px);
+}
+.backdrop .modal-container .order-detail-container {
+  width: 100%;
+  height: 14rem;
+  display: flex;
+  margin-bottom: 5rem;
+}
+.backdrop .modal-container .order-detail-container .left {
+  width: 60%;
+  background-color: var(--colorGrey);
+  border-radius: 1rem 0 0 1rem;
+}
+.backdrop .modal-container .order-detail-container .left .product-container-details {
+  padding: 2rem;
+}
+.backdrop .modal-container .order-detail-container .left .product-container-details .product-detail-top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.backdrop .modal-container .order-detail-container .left .product-container-details .product-detail-top p {
+  margin: 0;
+  font-weight: 1.4rem;
+}
+.backdrop .modal-container .order-detail-container .left .product-container-details .product-detail-top h6 {
+  font-weight: bold;
+  margin: 0;
+}
+.backdrop .modal-container .order-detail-container .left .product-container-details .other-item-details {
+  text-align: center;
+}
+.backdrop .modal-container .order-detail-container .right {
+  width: 40%;
+  background-color: black;
+  border-radius: 0 1rem 1rem 0;
+  color: white;
+}
+.backdrop .modal-container .order-detail-container .right .total-price-container {
+  padding: 3rem 2rem 5rem 2rem;
+}
+.backdrop .modal-container .order-detail-container .right .total-price-container h4 {
+  margin: 0;
+  font-size: 2rem;
+  color: gray;
+  letter-spacing: 0.2px;
+  font-weight: normal;
+}
+.backdrop .modal-container .order-detail-container .right .total-price-container p {
+  margin: 0;
+  color: var(--colorWhite);
+  font-size: 2.4rem;
+}
+.backdrop .modal-container h2 {
+  font-weight: bold;
+  letter-spacing: 1.14px;
+}
+.backdrop .modal-container p {
+  color: gray;
+}
+.backdrop .modal-container .button {
+  width: 300rem;
+  height: 20rem;
+}
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./src/app/Checkout/CheckoutForm.module.scss ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -269,4 +358,5 @@
   color: #b40e0e;
   font-size: 1.2rem;
   margin-top: 0;
+  max-width: 74rem;
 }

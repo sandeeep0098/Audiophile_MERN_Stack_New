@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import styles from './CheckoutForm.module.scss';
 import Link from 'next/link';
 import Summary from '@/components/cart/Sumarry';
+import OderDetailModalComponent from '@/components/layout/oderDetailModalComponent';
 
 const CheckoutForm = () => {
   const [paymentMethod, setPaymentMethod] = useState('cash');
@@ -13,6 +14,22 @@ const CheckoutForm = () => {
   const [enteredPhoneNumberIsTouched, setEnteredPhoneNumberIsTouched] =
     useState(false);
   const [enteredPhoneNumber, setEnteredPhoneNumber] = useState('');
+  const [enteredAddress, setEnteredAddress] = useState('');
+  const [enteredAddressTouched, setEnteredAddressTouched] = useState(false);
+  const [enteredCity, setEnteredCity] = useState('');
+  const [enteredCityTouched, setEnteredCityTouched] = useState(false);
+  const [enteredZipCode, setEnteredZipCode] = useState('');
+  const [enteredZipCodeTouched, setEnteredZipCodeTouched] = useState(false);
+  const [enteredCountry, setEnteredCountry] = useState('');
+  const [enteredCountryTouched, setEnteredCountryTouched] = useState(false);
+  const [enteredCardNo, setEnteredCardNo] = useState('');
+  const [enteredCardNoTouched, setEnteredCardNoTouched] = useState(false);
+  const [enteredCvv, setEnteredCvv] = useState('');
+  const [enteredCvvTouched, setEnteredCvvTouched] = useState(false);
+  const [enteredCardHolderName, setEnteredCardHolderName] = useState('');
+  const [enteredCardHolderNameTouched, setEnteredCardHolderNameTouched] =
+    useState(false);
+  const [orderDetailModal, setOrderDetailModal] = useState(false);
 
   const phoneNumberPattern = /^[0-9]*$/;
 
@@ -28,9 +45,46 @@ const CheckoutForm = () => {
   const enteredPhoneNumberIsInvalid =
     !enteredPhoneNumberIsValid && enteredPhoneNumberIsTouched;
 
+  const enteredAddressIsValid = enteredAddress.trim() !== '';
+  const enteredAddressIsInvalid =
+    !enteredAddressIsValid && enteredAddressTouched;
+
+  const enteredCityIsValid = enteredCity.trim() !== '';
+  const enteredCityIsInvalid = !enteredCityIsValid && enteredCityTouched;
+
+  const enteredZipCodeIsValid = enteredZipCode.trim() !== '';
+  const enteredZipCodeIsInvalid =
+    !enteredZipCodeIsValid && enteredZipCodeTouched;
+
+  const enteredCountryIsValid = enteredCountry.trim() !== '';
+  const enteredCountryIsInvalid =
+    !enteredCountryIsValid && enteredCountryTouched;
+
+  const enteredCardNoIsValid = enteredCardNo.trim() !== '';
+  const enteredCardNoIsInvalid = !enteredCardNoIsValid && enteredCardNoTouched;
+
+  const enteredCvvIsValid = enteredCvv.trim() !== '';
+  const enteredCvvIsInvalid = !enteredCvvIsValid && enteredCvvTouched;
+
+  const enteredCardHolderNameIsValid = enteredCardHolderName.trim() !== '';
+  const enteredCardHolderNameIsInvalid =
+    !enteredCardHolderNameIsValid && enteredCardHolderNameTouched;
+
+  // Form validity check
+
   let formIsValid = false;
 
-  if (enteredNameIsValid && enteredEmailIsValid) {
+  if (
+    (enteredNameIsValid &&
+      enteredEmailIsValid &&
+      enteredPhoneNumberIsValid &&
+      enteredAddressIsValid &&
+      enteredCityIsValid &&
+      enteredZipCodeIsValid &&
+      enteredCountryIsValid) ||
+    paymentMethod === 'emoney' ||
+    (enteredCardNoIsValid && enteredCvvIsValid && enteredCardHolderNameIsValid)
+  ) {
     formIsValid = true;
   }
 
@@ -53,15 +107,86 @@ const CheckoutForm = () => {
     setEnteredPhoneNumberIsTouched(true);
   };
 
+  const addressInputChangeHandler = (e) => {
+    setEnteredAddress(e.target.value);
+  };
+
+  const cityInputChangeHandler = (e) => {
+    setEnteredCity(e.target.value);
+  };
+
+  const zipCodeInputChangeHandler = (e) => {
+    setEnteredZipCode(e.target.value);
+  };
+
+  const countryInputChangeHandler = (e) => {
+    setEnteredCountry(e.target.value);
+  };
+  const cardNoInputChangeHandler = (e) => {
+    setEnteredCardNo(e.target.value);
+  };
+
+  const cvvInputChangeHandler = (e) => {
+    setEnteredCvv(e.target.value);
+  };
+
+  const cardHolderNameInputChangeHandler = (e) => {
+    setEnteredCardHolderName(e.target.value);
+  };
+
+  const addressInputBlurHandler = () => {
+    setEnteredAddressTouched(true);
+  };
+
+  const cityInputBlurHandler = () => {
+    setEnteredCityTouched(true);
+  };
+
+  const zipCodeInputBlurHandler = () => {
+    setEnteredZipCodeTouched(true);
+  };
+
+  const countryInputBlurHandler = () => {
+    setEnteredCountryTouched(true);
+  };
+
+  const cardNoInputBlurHandler = () => {
+    setEnteredCardNoTouched(true);
+  };
+
+  const cvvInputBlurHandler = () => {
+    setEnteredCvvTouched(true);
+  };
+
+  const cardHolderNameInputBlurHandler = () => {
+    setEnteredCardHolderNameTouched(true);
+  };
+
   const formSubmitHandler = (e) => {
     e.preventDefault();
     setEnteredNameTouched(true);
     setEnteredEmailTouched(true);
     setEnteredPhoneNumberIsTouched(true);
+    setEnteredAddressTouched(true);
+    setEnteredCityTouched(true);
+    setEnteredZipCodeTouched(true);
+    setEnteredCountryTouched(true);
+    setEnteredCardNoTouched(true);
+    setEnteredCvvTouched(true);
+    setEnteredCardHolderNameTouched(true);
+    setOrderDetailModal(true);
     if (
       !enteredNameIsValid ||
       !enteredEmailIsValid ||
-      !enteredPhoneNumberIsValid
+      !enteredPhoneNumberIsValid ||
+      !enteredAddressIsValid ||
+      !enteredCityIsValid ||
+      !enteredZipCodeIsValid ||
+      !enteredCountryIsValid ||
+      (paymentMethod === 'emoney' &&
+        (!enteredCardNoIsValid ||
+          !enteredCvvIsValid ||
+          !enteredCardHolderNameIsValid))
     ) {
       return;
     }
@@ -75,6 +200,20 @@ const CheckoutForm = () => {
     setEnteredEmailTouched(false);
     setEnteredPhoneNumber('');
     setEnteredPhoneNumberIsTouched(false);
+    setEnteredAddress('');
+    setEnteredAddressTouched(false);
+    setEnteredCity('');
+    setEnteredCityTouched(false);
+    setEnteredZipCode('');
+    setEnteredZipCodeTouched(false);
+    setEnteredCountry('');
+    setEnteredCountryTouched(false);
+    setEnteredCardNo('');
+    setEnteredCardNoTouched(false);
+    setEnteredCvv('');
+    setEnteredCvvTouched(false);
+    setEnteredCardHolderName('');
+    setEnteredCardHolderNameTouched(false);
   };
 
   const handlePaymentMethodChange = (event) => {
@@ -94,8 +233,42 @@ const CheckoutForm = () => {
   const phoneInputClasses = enteredPhoneNumberIsInvalid
     ? `${styles.formGroup} ${styles.formGroupInvalid}`
     : styles.formGroup;
+  const addressInputClasses =
+    !enteredAddressIsValid && enteredAddressTouched
+      ? `${styles.formGroup} ${styles.formGroupInvalid}`
+      : styles.formGroup;
+  const cityInputClasses =
+    !enteredCityIsValid && enteredCityTouched
+      ? `${styles.formGroup} ${styles.formGroupInvalid}`
+      : styles.formGroup;
+  const zipCodeInputClasses =
+    !enteredZipCodeIsValid && enteredZipCodeTouched
+      ? `${styles.formGroup} ${styles.formGroupInvalid}`
+      : styles.formGroup;
+  const countryInputClasses =
+    !enteredCountryIsValid && enteredCountryTouched
+      ? `${styles.formGroup} ${styles.formGroupInvalid}`
+      : styles.formGroup;
+  const cardNoInputClasses =
+    paymentMethod === 'emoney' && !enteredCardNoIsValid && enteredCardNoTouched
+      ? `${styles.formGroup} ${styles.formGroupInvalid}`
+      : styles.formGroup;
+  const cvvInputClasses =
+    paymentMethod === 'emoney' && !enteredCvvIsValid && enteredCvvTouched
+      ? `${styles.formGroup} ${styles.formGroupInvalid}`
+      : styles.formGroup;
+  const cardHolderNameInputClasses =
+    paymentMethod === 'emoney' &&
+    !enteredCardHolderNameIsValid &&
+    enteredCardHolderNameTouched
+      ? `${styles.formGroup} ${styles.formGroupInvalid}`
+      : styles.formGroup;
+
   return (
     <>
+      {orderDetailModal && (
+        <OderDetailModalComponent modalHandler={setOrderDetailModal} />
+      )}
       <div className={styles.wrapper}>
         <div className={styles.back_link}>
           <Link href="/" className={styles.link} onClick={handleGoBack}>
@@ -158,29 +331,69 @@ const CheckoutForm = () => {
 
             <div className={styles.formSection}>
               <h2>Shipping Info</h2>
-              <div className={styles.formGroup}>
+              <div className={addressInputClasses}>
                 <label htmlFor="address">Address:</label>
                 <input
                   type="text"
                   id="address"
                   placeholder="Enter your address"
+                  onChange={addressInputChangeHandler}
+                  onBlur={addressInputBlurHandler}
+                  value={enteredAddress}
+                  required
+                  className={addressInputClasses}
                 />
+                {enteredAddressIsInvalid && (
+                  <p className={styles.errorText}>Address must not be empty.</p>
+                )}
               </div>
-              <div className={styles.formGroup}>
+              <div className={cityInputClasses}>
                 <label htmlFor="city">City:</label>
-                <input type="text" id="city" placeholder="Enter your city" />
+                <input
+                  type="text"
+                  id="city"
+                  placeholder="Enter your city"
+                  onChange={cityInputChangeHandler}
+                  onBlur={cityInputBlurHandler}
+                  value={enteredCity}
+                  required
+                  className={cityInputClasses}
+                />
+                {enteredCityIsInvalid && (
+                  <p className={styles.errorText}>City must not be empty.</p>
+                )}
               </div>
-              <div className={styles.formGroup}>
-                <label htmlFor="zip">Zip Code:</label>
-                <input type="text" id="zip" placeholder="Enter your zip code" />
+              <div className={zipCodeInputClasses}>
+                <label htmlFor="zip">Pin Code:</label>
+                <input
+                  type="text"
+                  id="zip"
+                  placeholder="Enter your Pin code"
+                  onChange={zipCodeInputChangeHandler}
+                  onBlur={zipCodeInputBlurHandler}
+                  value={enteredZipCode}
+                  required
+                  className={zipCodeInputClasses}
+                />
+                {enteredZipCodeIsInvalid && (
+                  <p className={styles.errorText}>Pin code must not be empty</p>
+                )}
               </div>
-              <div className={styles.formGroup}>
+              <div className={countryInputClasses}>
                 <label htmlFor="country">Country:</label>
                 <input
                   type="text"
                   id="country"
                   placeholder="Enter your country"
+                  onChange={countryInputChangeHandler}
+                  onBlur={countryInputBlurHandler}
+                  value={enteredCountry}
+                  required
+                  className={countryInputClasses}
                 />
+                {enteredCountryIsInvalid && (
+                  <p className={styles.errorText}>Country must not be empty.</p>
+                )}
               </div>
             </div>
 
@@ -208,19 +421,39 @@ const CheckoutForm = () => {
                 </div>
                 {paymentMethod === 'emoney' && (
                   <div className={styles.emoneyDetails}>
-                    <div className={styles.formGroup}>
+                    <div className={cardNoInputClasses}>
                       <label htmlFor="cardno">Enter Card No:</label>
                       <input
                         type="text"
                         id="cardno"
                         placeholder="Enter your card number"
+                        onChange={cardNoInputChangeHandler}
+                        onBlur={cardNoInputBlurHandler}
+                        value={enteredCardNo}
                       />
+                      {enteredCardNoIsInvalid && (
+                        <p className={styles.errorText}>
+                          Enter any dummy value
+                        </p>
+                      )}
                     </div>
-                    <div className={styles.formGroup}>
+                    <div className={cvvInputClasses}>
                       <label htmlFor="cvv">CVV:</label>
-                      <input type="text" id="cvv" placeholder="Enter the CVV" />
+                      <input
+                        type="text"
+                        id="cvv"
+                        placeholder="Enter the CVV"
+                        onChange={cvvInputChangeHandler}
+                        onBlur={cvvInputBlurHandler}
+                        value={enteredCvv}
+                      />
+                      {enteredCvvIsInvalid && (
+                        <p className={styles.errorText}>
+                          Enter any dummy value
+                        </p>
+                      )}
                     </div>
-                    <div className={styles.formGroup}>
+                    <div className={cardHolderNameInputClasses}>
                       <label htmlFor="cardHolderName">
                         Card Holder's Name:
                       </label>
@@ -228,15 +461,20 @@ const CheckoutForm = () => {
                         type="text"
                         id="cardHolderName"
                         placeholder="Enter the card holder's name"
+                        onChange={cardHolderNameInputChangeHandler}
+                        onBlur={cardHolderNameInputBlurHandler}
+                        value={enteredCardHolderName}
                       />
+                      {enteredCardHolderNameIsInvalid && (
+                        <p className={styles.errorText}>
+                          Enter any dummy value
+                        </p>
+                      )}
                     </div>
                   </div>
                 )}
               </div>
             </div>
-            <button type="submit" onSubmit={formSubmitHandler}>
-              Submit
-            </button>
           </form>
           <Summary onSubmit={formSubmitHandler} />
         </div>

@@ -288,7 +288,11 @@ const CheckoutForm = () => {
           </Link>
         </div>
         <div className={styles.wrapper_form}>
-          <form className={styles.checkoutForm} onSubmit={formSubmitHandler}>
+          <form
+            method="post"
+            className={styles.checkoutForm}
+            onSubmit={formSubmitHandler}
+          >
             <div className={styles.formSection}>
               <h1>Checkout</h1>
               <h2>Billing Details</h2>
@@ -301,6 +305,7 @@ const CheckoutForm = () => {
                   onChange={nameInputChangeHandler}
                   onBlur={nameInputBlurHandler}
                   value={enteredName}
+                  name="username"
                 />
                 {nameInputIsInvalid && (
                   <p className={styles.errorText}>Name must not be empty.</p>
@@ -316,6 +321,7 @@ const CheckoutForm = () => {
                   onChange={emailInputChangeHandler}
                   onBlur={emailInputBlurHandler}
                   value={enteredEmail}
+                  name="email"
                 />
                 {enteredEmailIsInvalid && (
                   <p className={styles.errorText}>
@@ -332,6 +338,7 @@ const CheckoutForm = () => {
                   value={enteredPhoneNumber}
                   onChange={phoneInputChangeHandler}
                   onBlur={phoneInputBlurHandler}
+                  name="mobile_no"
                 />
                 {enteredPhoneNumberIsInvalid && (
                   <p className={styles.errorText}>
@@ -354,6 +361,7 @@ const CheckoutForm = () => {
                   value={enteredAddress}
                   required
                   className={addressInputClasses}
+                  name="address"
                 />
                 {enteredAddressIsInvalid && (
                   <p className={styles.errorText}>Address must not be empty.</p>
@@ -370,6 +378,7 @@ const CheckoutForm = () => {
                   value={enteredCity}
                   required
                   className={cityInputClasses}
+                  name="city"
                 />
                 {enteredCityIsInvalid && (
                   <p className={styles.errorText}>City must not be empty.</p>
@@ -386,6 +395,7 @@ const CheckoutForm = () => {
                   value={enteredZipCode}
                   required
                   className={zipCodeInputClasses}
+                  name="zip_code"
                 />
                 {enteredZipCodeIsInvalid && (
                   <p className={styles.errorText}>Pin code must not be empty</p>
@@ -402,6 +412,7 @@ const CheckoutForm = () => {
                   value={enteredCountry}
                   required
                   className={countryInputClasses}
+                  name="country"
                 />
                 {enteredCountryIsInvalid && (
                   <p className={styles.errorText}>Country must not be empty.</p>
@@ -420,6 +431,7 @@ const CheckoutForm = () => {
                     value="cash"
                     checked={paymentMethod === 'cash'}
                     onChange={handlePaymentMethodChange}
+                    name="cod"
                   />
                   <label htmlFor="cash">Cash on Delivery</label>
                   <input
@@ -428,6 +440,7 @@ const CheckoutForm = () => {
                     value="emoney"
                     checked={paymentMethod === 'emoney'}
                     onChange={handlePaymentMethodChange}
+                    name="emoney"
                   />
                   <label htmlFor="emoney">E-Money</label>
                 </div>
@@ -442,6 +455,7 @@ const CheckoutForm = () => {
                         onChange={cardNoInputChangeHandler}
                         onBlur={cardNoInputBlurHandler}
                         value={enteredCardNo}
+                        name="card_no"
                       />
                       {enteredCardNoIsInvalid && (
                         <p className={styles.errorText}>
@@ -458,6 +472,7 @@ const CheckoutForm = () => {
                         onChange={cvvInputChangeHandler}
                         onBlur={cvvInputBlurHandler}
                         value={enteredCvv}
+                        name="cvv"
                       />
                       {enteredCvvIsInvalid && (
                         <p className={styles.errorText}>
@@ -476,6 +491,7 @@ const CheckoutForm = () => {
                         onChange={cardHolderNameInputChangeHandler}
                         onBlur={cardHolderNameInputBlurHandler}
                         value={enteredCardHolderName}
+                        name="cardHolderName"
                       />
                       {enteredCardHolderNameIsInvalid && (
                         <p className={styles.errorText}>
@@ -487,6 +503,7 @@ const CheckoutForm = () => {
                 )}
               </div>
             </div>
+            <button onSubmit={formSubmitHandler}>submit</button>
           </form>
           <Summary onSubmit={formSubmitHandler} />
         </div>

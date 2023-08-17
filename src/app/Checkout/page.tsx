@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import styles from './CheckoutForm.module.scss';
 import Link from 'next/link';
 import Summary from '@/components/cart/Sumarry';
-import OderDetailModalComponent from '@/components/layout/oderDetailModalComponent';
+import OderDetailModalComponent from '@/components/layout/OderDetailModalComponent';
 
 const CheckoutForm = () => {
   const [paymentMethod, setPaymentMethod] = useState('cash');

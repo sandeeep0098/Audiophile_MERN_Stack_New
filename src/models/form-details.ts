@@ -1,33 +1,26 @@
 import mongoose, { Schema } from 'mongoose';
 
-const userSchema = new Schema({
+const UserSchema = new Schema({
   username: {
     type: String,
-    required: true,
   },
   email: {
     type: String,
-    required: true,
   },
   mobile_no: {
-    type: String,
-    required: true,
+    type: Number,
   },
   address: {
     type: String,
-    required: true,
   },
   city: {
     type: String,
-    required: true,
   },
   zip_code: {
     type: String,
-    required: true,
   },
   country: {
     type: String,
-    required: true,
   },
   cod: {
     type: Boolean,
@@ -48,6 +41,6 @@ const userSchema = new Schema({
   },
 });
 
-const User = mongoose.model('User', userSchema);
+const User = mongoose.models.User || mongoose.model('User', UserSchema);
 
 export default User;

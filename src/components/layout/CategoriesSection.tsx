@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import './categoriesSection.scss';
+import './categoriessection.scss';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import categoryPreviewHeadphones from '../../../public/assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview-headphones.png';
 import categoryPreviewSpeakers from '../../../public/assets/product-zx9-speaker/desktop/image-category-page-preview.png';
@@ -10,6 +10,7 @@ import Link from 'next/link';
 
 import { useParams } from 'next/navigation';
 import { ProductProps } from '@/app/types';
+import { ImportExport } from '@mui/icons-material';
 
 const CategoriesSection: React.FC<{ products: ProductProps[] }> = ({
   products,

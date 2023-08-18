@@ -207,27 +207,26 @@ const CheckoutForm = () => {
     console.log('Entered CVV:', enteredCvv);
     console.log('Entered Card Holder Name:', enteredCardHolderName);
     try {
-      const res = await fetch(
-        'https://audiophile-mern-stack-new-3tq6-mv0zz3yf3-sandeeep0098.vercel.app/api/userinputs',
-        {
-          method: 'POST',
-          headers: { 'content-type': 'application/json' },
-          mode: 'cors',
-          body: JSON.stringify({
-            enteredName,
-            enteredEmail,
-            enteredPhoneNumber,
-            enteredAddress,
-            enteredCity,
-            enteredZipCode,
-            paymentMethod,
-            enteredCountry,
-            enteredCardNo,
-            enteredCvv,
-            enteredCardHolderName,
-          }),
-        }
-      );
+      // const res = await fetch(
+      // 'https://audiophile-mern-stack-new-3tq6-mv0zz3yf3-sandeeep0098.vercel.app/api/userinputs',
+      const res = await fetch('/api/userinputs', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        mode: 'cors',
+        body: JSON.stringify({
+          enteredName,
+          enteredEmail,
+          enteredPhoneNumber,
+          enteredAddress,
+          enteredCity,
+          enteredZipCode,
+          paymentMethod,
+          enteredCountry,
+          enteredCardNo,
+          enteredCvv,
+          enteredCardHolderName,
+        }),
+      });
       if (res.ok) {
         console.log('Data submitted successfully to mongo db');
       } else {

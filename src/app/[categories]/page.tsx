@@ -4,6 +4,7 @@ import CategoriesSection from '@/components/layout/CategoriesSection';
 import AboutUs from '@/components/layout/AboutUs';
 import ProductList from '@/components/product/ProductList';
 import { ParamProps } from '@/app/types/index';
+import Cart from '@/components/cart/Cart';
 
 export async function getProducts() {
   try {
@@ -33,6 +34,7 @@ export default async function ({ params }: ParamProps) {
         <h2>{params.categories}</h2>
       </div>
       <ProductList products={productsArray} />
+
       <CategoriesSection />
       <AboutUs />
     </div>

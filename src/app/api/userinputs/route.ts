@@ -4,31 +4,31 @@ import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
   const {
-    username,
-    email,
-    mobile_no,
-    address,
-    zip_code,
-    cvv,
-    city,
-    country,
-    cod,
-    emoney,
-    cardHolderName,
+    enteredName,
+    enteredEmail,
+    enteredPhoneNumber,
+    enteredAddress,
+    enteredCity,
+    enteredZipCode,
+    enteredCountry,
+    enteredCardNo,
+    enteredCvv,
+    enteredCardHolderName,
+    paymentMethod,
   } = await request.json();
   await connectMongoDB();
   await User.create({
-    username,
-    email,
-    mobile_no,
-    address,
-    zip_code,
-    cvv,
-    city,
-    country,
-    cod,
-    emoney,
-    cardHolderName,
+    enteredName,
+    enteredEmail,
+    enteredPhoneNumber,
+    enteredAddress,
+    enteredCity,
+    enteredZipCode,
+    enteredCountry,
+    paymentMethod,
+    enteredCardNo,
+    enteredCvv,
+    enteredCardHolderName,
   });
 
   return NextResponse.json({ Message: 'Success' }, { status: 201 });

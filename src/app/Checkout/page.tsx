@@ -4,7 +4,8 @@ import styles from './CheckoutForm.module.scss';
 import Link from 'next/link';
 import Summary from '@/components/cart/Sumarry';
 import OderDetailModalComponent from '@/components/layout/OderDetailModalComponent';
-
+import { headers } from 'next/dist/client/components/headers';
+import { useRouter } from 'next/navigation';
 const CheckoutForm = () => {
   const [paymentMethod, setPaymentMethod] = useState('cash');
   const [enteredName, setEnteredName] = useState('');
@@ -30,6 +31,7 @@ const CheckoutForm = () => {
   const [enteredCardHolderNameTouched, setEnteredCardHolderNameTouched] =
     useState(false);
   const [orderDetailModal, setOrderDetailModal] = useState(false);
+  const router = useRouter();
 
   const phoneNumberPattern = /^[0-9]*$/;
 
@@ -163,7 +165,7 @@ const CheckoutForm = () => {
     setEnteredCardHolderNameTouched(true);
   };
 
-  const formSubmitHandler = (e) => {
+  const formSubmitHandler = async (e) => {
     e.preventDefault();
     setEnteredNameTouched(true);
     setEnteredEmailTouched(true);
@@ -191,6 +193,7 @@ const CheckoutForm = () => {
     ) {
       return;
     }
+
     console.log('form submitted');
     console.log('Entered Name:', enteredName);
     console.log('Entered Email:', enteredEmail);
@@ -198,10 +201,40 @@ const CheckoutForm = () => {
     console.log('Entered Address:', enteredAddress);
     console.log('Entered City:', enteredCity);
     console.log('Entered Zip Code:', enteredZipCode);
+    console.log('entered payment method:', paymentMethod);
     console.log('Entered Country:', enteredCountry);
     console.log('Entered Card No:', enteredCardNo);
     console.log('Entered CVV:', enteredCvv);
     console.log('Entered Card Holder Name:', enteredCardHolderName);
+    try {
+      const res = await fetch('http://localhost:3000/api/userinputs', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        mode: 'cors',
+        body: JSON.stringify({
+          enteredName,
+          enteredEmail,
+          enteredPhoneNumber,
+          enteredAddress,
+          enteredCity,
+          enteredZipCode,
+          paymentMethod,
+          enteredCountry,
+          enteredCardNo,
+          enteredCvv,
+          enteredCardHolderName,
+        }),
+      });
+      if (res.ok) {
+        console.log('Data submitted successfully to mongo db');
+        router.push('/');
+      } else {
+        throw new Error('Failed to create');
+      }
+    } catch (error) {
+      console.log('Error submitting data:', error);
+      console.log(error);
+    }
     setEnteredName('');
     setEnteredNameTouched(false);
     setEnteredEmail('');
@@ -503,7 +536,9 @@ const CheckoutForm = () => {
                 )}
               </div>
             </div>
-            <button onSubmit={formSubmitHandler}>submit</button>
+            <button type="submit" onSubmit={formSubmitHandler}>
+              submit
+            </button>
           </form>
           <Summary onSubmit={formSubmitHandler} />
         </div>

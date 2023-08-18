@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from 'react';
 import './Cart.scss';
 import ProductLinkPrimaryButton from '../UI/productLinkPrimaryButton';

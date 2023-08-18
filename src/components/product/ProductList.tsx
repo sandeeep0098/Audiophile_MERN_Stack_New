@@ -2,11 +2,9 @@
 import React, { FC } from 'react';
 import './productlist.scss';
 import Image from 'next/image';
-
 import ProductLinkPrimaryButton from '../UI/productLinkPrimaryButton';
 import { useParams } from 'next/navigation';
 import { ProductProps } from '@/app/types/index';
-import Link from 'next/link';
 
 const ProductList: React.FC<{ products: ProductProps[] }> = ({ products }) => {
   const params = useParams();

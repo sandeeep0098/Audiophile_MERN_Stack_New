@@ -9,6 +9,7 @@ import { useParams } from 'next/navigation';
 import { ProductProps } from '@/app/types';
 import ManageProduct from '../UI/ManageProduct';
 import ProductListItem from '../product/ProductListItem';
+import CartProduct from './CartProduct';
 
 const Cart: React.FC<{ products: ProductProps[] }> = ({
   showCartHandler,
@@ -19,36 +20,25 @@ const Cart: React.FC<{ products: ProductProps[] }> = ({
   const cartQuantity = useAppSelector((state) => state.cart.totalQuantity);
   const cartTotalAmont = useAppSelector((state) => state.cart.totalAmount);
   const emptyCart = cartProducts.length === 0;
+  const dispatch = useAppDispatch();
+
+  const removeAllProductsFromCart = (e: any) => {
+    e.preventDefault();
+    // setCartItemQuantity((prev) => 0);
+    dispatch(cartActions.removeAllProducts());
+  };
 
   if (!emptyCart) {
     return (
       <div className={`cart ${cartisopen ? 'cart-open' : ''}`}>
         <div className="top">
           <h6>Cart({cartQuantity})</h6>
-          <p>Remove all</p>
+          <p onClick={removeAllProductsFromCart}>Remove all</p>
         </div>
 
         {cartProducts.map((product) => (
           <ul key={product._id} className="center">
-            <li className="cartItem">
-              <div className="left">
-                <Image
-                  src={product.image.desktop}
-                  alt={product.title}
-                  className="productImg"
-                  width={100}
-                  height={100}
-                ></Image>
-                <div className="text-container">
-                  <h6>
-                    {product.name.substring(0, 4)} <br />
-                    <span>$ {product.price}</span>
-                  </h6>
-                </div>
-              </div>
-
-              <ManageProduct />
-            </li>
+            <CartProduct key={product._id} product={product} />
           </ul>
         ))}
 

@@ -6,6 +6,9 @@ import Summary from '@/components/cart/Sumarry';
 import OderDetailModalComponent from '@/components/layout/OderDetailModalComponent';
 import { headers } from 'next/dist/client/components/headers';
 import { useRouter } from 'next/navigation';
+import { useAppDispatch } from '@/hooks/hooks';
+import { useAppSelector } from '@/hooks/hooks';
+import { cartActions } from '@/store/cart-slice';
 const CheckoutForm = () => {
   const [paymentMethod, setPaymentMethod] = useState('cash');
   const [enteredName, setEnteredName] = useState('');
@@ -31,7 +34,7 @@ const CheckoutForm = () => {
   const [enteredCardHolderNameTouched, setEnteredCardHolderNameTouched] =
     useState(false);
   const [orderDetailModal, setOrderDetailModal] = useState(false);
-  const router = useRouter();
+  const dispatch = useAppDispatch();
 
   const phoneNumberPattern = /^[0-9]*$/;
 
@@ -209,7 +212,7 @@ const CheckoutForm = () => {
     try {
       // const res = await fetch(
       // 'https://audiophile-mern-stack-new-3tq6-mv0zz3yf3-sandeeep0098.vercel.app/api/userinputs',
-      const res = await fetch('/api/userinputs', {
+      const res = await fetch('http://localhost:3000/api/userinput', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         mode: 'cors',
@@ -236,6 +239,8 @@ const CheckoutForm = () => {
       console.log('Error submitting data:', error);
       console.log(error);
     }
+
+    dispatch(cartActions.removeAllProducts());
     setEnteredName('');
     setEnteredNameTouched(false);
     setEnteredEmail('');

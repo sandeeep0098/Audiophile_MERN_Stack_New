@@ -8,9 +8,12 @@ import Cart from '@/components/cart/Cart';
 
 export async function getProducts() {
   try {
-    const res = await fetch('http://localhost:3000/api/products', {
-      next: { revalidate: 60 },
-    });
+    const res = await fetch(
+      'https://audiophile-mern-stack-new-3tq6-mv0zz3yf3-sandeeep0098.vercel.app//api/products',
+      {
+        next: { revalidate: 60 },
+      }
+    );
 
     if (!res.ok) {
       throw new Error('Failed to fetch products from the API.');

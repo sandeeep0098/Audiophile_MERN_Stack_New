@@ -8,6 +8,8 @@ import twitterIcon from '../../../public/assets/shared/desktop/icon-twitter.svg'
 import logo from '../../../public/assets/shared/desktop/logo.svg';
 
 const Footer = () => {
+  console.log('hello World');
+
   return (
     <footer className="footer">
       <div className="left">

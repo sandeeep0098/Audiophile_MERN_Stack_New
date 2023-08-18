@@ -16,6 +16,7 @@ const Header = () => {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
           </p>
+
           <ProductLinkPrimaryButton
             path="/headphones/xx99-mark-two-headphones"
             type="primary"

@@ -77,7 +77,7 @@ const Summary = ({ onSubmit }) => {
           </div>
           <div className="cart-buttons">
             <ProductLinkPrimaryButton
-              path="/Checkout"
+              path="/"
               type="primary"
               className="button"
               name="Continue & Pay"

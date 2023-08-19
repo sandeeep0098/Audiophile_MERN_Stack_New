@@ -11,6 +11,7 @@ import ManageProduct from '../UI/ManageProduct';
 import ProductListItem from '../product/ProductListItem';
 import CartProduct from './CartProduct';
 import emptyCartgif from '../../../public/empty-cart.gif';
+import emptyCartimg from '../../../public/cart-empty.png';
 import headphoneImg from '../../../public/assets/cart/image-xx59-headphones.jpg';
 
 const Cart = ({ showCartHandler, cartisopen }: any) => {
@@ -74,7 +75,7 @@ const Cart = ({ showCartHandler, cartisopen }: any) => {
 
         <div className="empty-cart">
           <Image
-            src={emptyCartgif}
+            src={emptyCartimg}
             alt="empty-cart-Image"
             width={300}
             height={300}

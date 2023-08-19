@@ -13,6 +13,7 @@ import CartProduct from './CartProduct';
 
 const Cart = ({ showCartHandler, cartisopen }: any) => {
   const cartProducts = useAppSelector((state) => state.cart.products);
+
   const cartQuantity = useAppSelector((state) => state.cart.totalQuantity);
   const cartTotalAmont = useAppSelector((state) => state.cart.totalAmount);
   const emptyCart = cartProducts.length === 0;

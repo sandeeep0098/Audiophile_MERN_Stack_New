@@ -117,11 +117,12 @@
 }
 .productlistitem .right .right-container p {
   color: gray;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 .productlistitem .right .right-container .productprice {
   font-size: 18px;
   color: black;
+  margin-bottom: 3rem;
 }
 .productlistitem .section_two {
   margin-bottom: 3rem;

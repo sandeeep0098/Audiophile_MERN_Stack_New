@@ -54,6 +54,7 @@ const ProductListItem: React.FC<{ products: ProductProps[] }> = ({
     dispatch(cartActions.removeAllProducts());
   };
   useEffect(() => setShowProduct(true), []);
+  sessionStorage.setItem('cartProducts', JSON.stringify(cartProducts));
   return (
     <div className="productlistitem">
       <Link href="" className="back-link" onClick={handleGoBack}>
@@ -84,16 +85,17 @@ const ProductListItem: React.FC<{ products: ProductProps[] }> = ({
             <br />
             <br />
             <div>
-              <button onClick={removeFromCartHandler}>-</button>
-              <span> {cartProducts.map((product) => product.quantity)}</span>
+              {/* <ManageProduct /> */}
+              {/* <button onClick={removeFromCartHandler}>-</button> */}
+              {/* <span> {cartProducts.map((product) => product.quantity)}</span>
 
-              <button onClick={addToCartHandler}>+</button>
+              <button onClick={addToCartHandler}>+</button> */}
             </div>
-            <button onClick={addToCartHandler}>Add To Cart</button>
+            {/* <button onClick={addToCartHandler}>Add To Cart</button>
             <button onClick={removeFromCartHandler}>Remove from Cart</button>
             <button onClick={removeAllProductsFromCart}>
               Remove all products
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

@@ -10,6 +10,7 @@ const CartProduct = ({ product }) => {
   const removeProductHandler = () => {
     dispatch(cartActions.removeProductFromCart(product._id));
   };
+
   const addProductHandler = () => {
     dispatch(cartActions.addProductToCart(product));
   };
@@ -34,9 +35,13 @@ const CartProduct = ({ product }) => {
           </div>
         </div>
 
-        <button onClick={removeProductHandler}>-</button>
-        <span>{product.quantity}</span>
-        <button onClick={addProductHandler}>+</button>
+        <div className="cart-actions">
+          <div className="inc_dec_button">
+            <button onClick={removeProductHandler}>-</button>
+            <div className="demo">{product.quantity}</div>
+            <button onClick={addProductHandler}>+</button>
+          </div>
+        </div>
       </li>
     </div>
   );

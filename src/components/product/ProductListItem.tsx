@@ -43,8 +43,8 @@ const ProductListItem: React.FC<{ products: ProductProps[] }> = ({
       return;
     }
     {
-      dispatch(cartActions.removeProductFromCart(product));
-      setCartItemQuantity((prev) => prev - 1);
+      dispatch(cartActions.removeProductFromCart(product._id));
+
       console.log('product removed successfully');
     }
   };
@@ -85,7 +85,8 @@ const ProductListItem: React.FC<{ products: ProductProps[] }> = ({
             <br />
             <div>
               <button onClick={removeFromCartHandler}>-</button>
-              <span>{cartItemQuantiy}</span>
+              <span> {cartProducts.map((product) => product.quantity)}</span>
+
               <button onClick={addToCartHandler}>+</button>
             </div>
             <button onClick={addToCartHandler}>Add To Cart</button>

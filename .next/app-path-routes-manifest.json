@@ -1,0 +1,9 @@
+{
+  "/page": "/",
+  "/favicon.ico/route": "/favicon.ico",
+  "/Checkout/page": "/Checkout",
+  "/[categories]/page": "/[categories]",
+  "/api/userinputs/route": "/api/userinputs",
+  "/[categories]/[slug]/page": "/[categories]/[slug]",
+  "/api/products/route": "/api/products"
+}

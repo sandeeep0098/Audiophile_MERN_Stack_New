@@ -181,6 +181,7 @@
   width: 100%;
   height: 14rem;
   display: flex;
+  margin: 0;
   margin-bottom: 5rem;
 }
 .backdrop .modal-container .order-detail-container .left {
@@ -189,12 +190,14 @@
   border-radius: 1rem 0 0 1rem;
 }
 .backdrop .modal-container .order-detail-container .left .product-container-details {
-  padding: 2rem;
+  padding: 0 2rem;
+  margin-top: 0;
 }
 .backdrop .modal-container .order-detail-container .left .product-container-details .product-detail-top {
   display: flex;
-  justify-content: space-around;
+  gap: 1rem;
   align-items: center;
+  margin-left: 0rem;
 }
 .backdrop .modal-container .order-detail-container .left .product-container-details .product-detail-top p {
   margin: 0;
@@ -204,8 +207,12 @@
   font-weight: bold;
   margin: 0;
 }
+.backdrop .modal-container .order-detail-container .left .product-container-details hr {
+  margin: 0;
+}
 .backdrop .modal-container .order-detail-container .left .product-container-details .other-item-details {
   text-align: center;
+  margin-top: 0.5rem;
 }
 .backdrop .modal-container .order-detail-container .right {
   width: 40%;

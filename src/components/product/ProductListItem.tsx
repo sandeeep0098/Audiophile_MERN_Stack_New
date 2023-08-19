@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import './ProductListItem.scss';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -19,6 +19,7 @@ const ProductListItem: React.FC<{ products: ProductProps[] }> = ({
   const params = useParams();
   const cartProducts = useAppSelector((state) => state.cart.products);
   const product = products.find((product) => product.slug === params.slug);
+  const [showProduct, setShowProduct] = useState(false);
 
   console.log(product);
   const [cartItemQuantiy, setCartItemQuantity] = useState(0);
@@ -52,12 +53,13 @@ const ProductListItem: React.FC<{ products: ProductProps[] }> = ({
     setCartItemQuantity((prev) => 0);
     dispatch(cartActions.removeAllProducts());
   };
+  useEffect(() => setShowProduct(true), []);
   return (
     <div className="productlistitem">
       <Link href="" className="back-link" onClick={handleGoBack}>
         Go Back
       </Link>
-      <div className="section_one">
+      <div className={showProduct ? 'show section_one' : 'section_one'}>
         <div className="left">
           <Image
             src={product?.image.desktop}

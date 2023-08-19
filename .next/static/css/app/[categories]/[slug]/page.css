@@ -85,6 +85,11 @@
   margin-bottom: 3rem;
   display: flex;
   gap: 11rem;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+.productlistitem .section_one.show {
+  opacity: 1;
 }
 .productlistitem .section_one .left {
   width: 50%;

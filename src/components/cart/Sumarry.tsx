@@ -12,7 +12,7 @@ const Summary = ({ onSubmit }) => {
   const cartProducts = useAppSelector((state) => state.cart.products);
   const cartQuantity = useAppSelector((state) => state.cart.totalQuantity);
   const cartTotalAmount = useAppSelector((state) => state.cart.totalAmount);
-
+  const cartItemQuantiy = useAppSelector((state) => state.cart);
   const vatAmount = (cartTotalAmount + 50) * 0.18;
   const grandTotalAmount = cartTotalAmount + vatAmount + 50;
 
@@ -41,7 +41,7 @@ const Summary = ({ onSubmit }) => {
                 </div>
               </div>
               <div className="right">
-                <div className="quantity">{`x${cartQuantity}`}</div>
+                <div className="quantity">{`x${product.quantity}`}</div>
               </div>
             </div>
           </div>

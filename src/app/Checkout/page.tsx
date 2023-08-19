@@ -240,7 +240,7 @@ const CheckoutForm = () => {
       console.log(error);
     }
 
-    dispatch(cartActions.removeAllProducts());
+    // dispatch(cartActions.removeAllProducts());
     setEnteredName('');
     setEnteredNameTouched(false);
     setEnteredEmail('');

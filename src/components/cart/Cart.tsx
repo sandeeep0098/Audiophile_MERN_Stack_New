@@ -11,11 +11,7 @@ import ManageProduct from '../UI/ManageProduct';
 import ProductListItem from '../product/ProductListItem';
 import CartProduct from './CartProduct';
 
-const Cart: React.FC<{ products: ProductProps[] }> = ({
-  showCartHandler,
-  cartisopen,
-  products,
-}: any) => {
+const Cart = ({ showCartHandler, cartisopen }: any) => {
   const cartProducts = useAppSelector((state) => state.cart.products);
   const cartQuantity = useAppSelector((state) => state.cart.totalQuantity);
   const cartTotalAmont = useAppSelector((state) => state.cart.totalAmount);

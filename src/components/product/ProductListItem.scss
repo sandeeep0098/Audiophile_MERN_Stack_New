@@ -19,7 +19,12 @@
     display: flex;
 
     gap: 11rem;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
 
+    &.show {
+      opacity: 1;
+    }
     .left {
       width: 50%;
       .headphoneImg {

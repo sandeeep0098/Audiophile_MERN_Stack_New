@@ -1,11 +1,24 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+const products =
+  localStorage.getItem('cartProducts') !== null
+    ? JSON.parse(localStorage.getItem('cartProducts'))
+    : [];
+const totalQuantity =
+  localStorage.getItem('totalQuantity') !== null
+    ? JSON.parse(localStorage.getItem('totalQuantity'))
+    : 0;
+const totalAmount =
+  localStorage.getItem('totalAmount') !== null
+    ? JSON.parse(localStorage.getItem('totalAmount'))
+    : 0;
+
 const cartSlice = createSlice({
   name: 'cart',
   initialState: {
-    products: [],
-    totalQuantity: 0,
-    totalAmount: 0,
+    products: products,
+    totalQuantity: totalQuantity,
+    totalAmount: totalAmount,
   },
   reducers: {
     addProductToCart(state, action) {
@@ -29,6 +42,15 @@ const cartSlice = createSlice({
         existingProduct.quantity++;
         existingProduct.totalPrice += newProduct.price;
       }
+      localStorage.setItem(
+        'cartProducts',
+        JSON.stringify(state.products.map((product) => product))
+      );
+      localStorage.setItem(
+        'totalQuantity',
+        JSON.stringify(state.totalQuantity)
+      );
+      localStorage.setItem('totalAmount', JSON.stringify(state.totalAmount));
     },
     removeProductFromCart(state, action) {
       const id = action.payload;
@@ -44,11 +66,23 @@ const cartSlice = createSlice({
         existingProduct.quantity--;
         existingProduct.totalPrice -= existingProduct.price;
       }
+      localStorage.setItem(
+        'cartProducts',
+        JSON.stringify(state.products.map((product) => product))
+      );
+      localStorage.setItem(
+        'totalQuantity',
+        JSON.stringify(state.totalQuantity)
+      );
+      localStorage.setItem('totalAmount', JSON.stringify(state.totalAmount));
     },
     removeAllProducts(state) {
       state.products = [];
       state.totalQuantity = 0;
       state.totalAmount = 0;
+      localStorage.removeItem('cartProducts');
+      localStorage.removeItem('totalQuantity');
+      localStorage.removeItem('totalAmount');
     },
   },
 });

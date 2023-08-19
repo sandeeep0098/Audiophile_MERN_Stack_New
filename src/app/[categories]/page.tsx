@@ -9,9 +9,8 @@ import Cart from '@/components/cart/Cart';
 export async function getProducts() {
   try {
     const res = await fetch(
-      'http://silly-pithivier-838e11.netlify.app/api/products',
+      'https://silly-pithivier-838e11.netlify.app/api/products',
       {
-        // const res = await fetch('http://localhost:3000/api/products', {
         next: { revalidate: 60 },
       }
     );

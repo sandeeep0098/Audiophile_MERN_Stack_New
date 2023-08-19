@@ -9,7 +9,7 @@ import Cart from '@/components/cart/Cart';
 export async function getProducts() {
   try {
     const res = await fetch(
-      'http://audiophile-mern-stack-new-hcz5-sandeeep0098.vercel.app//api/products',
+      'http://audiophile-mern-stack-new-hcz5-sandeeep0098.vercel.app/api/products',
       {
         // const res = await fetch('http://localhost:3000/api/products', {
         next: { revalidate: 60 },

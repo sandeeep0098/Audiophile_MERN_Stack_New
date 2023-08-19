@@ -1,10 +1,10 @@
 {
   "pages": {
-    "/Checkout/page": [
+    "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/Checkout/page.css",
-      "static/chunks/app/Checkout/page.js"
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
     ],
     "/page": [
       "static/chunks/webpack.js",
@@ -24,11 +24,11 @@
       "static/css/app/[categories]/[slug]/page.css",
       "static/chunks/app/[categories]/[slug]/page.js"
     ],
-    "/layout": [
+    "/Checkout/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/layout.css",
-      "static/chunks/app/layout.js"
+      "static/css/app/Checkout/page.css",
+      "static/chunks/app/Checkout/page.js"
     ]
   }
 }

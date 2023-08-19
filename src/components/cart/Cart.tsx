@@ -10,7 +10,7 @@ import { ProductProps } from '@/app/types';
 import ManageProduct from '../UI/ManageProduct';
 import ProductListItem from '../product/ProductListItem';
 import CartProduct from './CartProduct';
-import emptyCartgif from '../../../public/assets/cart/empty-cart.gif';
+import emptyCartgif from '../../../public/empty-cart.gif';
 import headphoneImg from '../../../public/assets/cart/image-xx59-headphones.jpg';
 
 const Cart = ({ showCartHandler, cartisopen }: any) => {
@@ -74,17 +74,12 @@ const Cart = ({ showCartHandler, cartisopen }: any) => {
 
         <div className="empty-cart">
           <Image
-            src={headphoneImg}
-            alt="empty-cart-Image"
-            width={300}
-            height={300}
-          ></Image>
-          <Image
             src={emptyCartgif}
             alt="empty-cart-Image"
             width={300}
             height={300}
           ></Image>
+
           <p>Ops Your Cart Is Empty!!</p>
         </div>
 
@@ -103,5 +98,7 @@ const Cart = ({ showCartHandler, cartisopen }: any) => {
     );
   }
 };
+console.log(emptyCartgif);
+console.log(headphoneImg);
 
 export default Cart;

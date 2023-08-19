@@ -10,6 +10,7 @@ import { ProductProps } from '@/app/types';
 import ManageProduct from '../UI/ManageProduct';
 import ProductListItem from '../product/ProductListItem';
 import CartProduct from './CartProduct';
+import emptyCartgif from '../../../public/assets/cart/empty-cart.gif';
 
 const Cart = ({ showCartHandler, cartisopen }: any) => {
   const cartProducts = useAppSelector((state) => state.cart.products);
@@ -72,7 +73,7 @@ const Cart = ({ showCartHandler, cartisopen }: any) => {
 
         <div className="empty-cart">
           <Image
-            src="https://cdn.dribbble.com/users/887568/screenshots/3172047/media/35159a4a9ba57200e5e17119ffd945e6.gif"
+            src={emptyCartgif}
             alt="empty-cart-Image"
             width={300}
             height={300}

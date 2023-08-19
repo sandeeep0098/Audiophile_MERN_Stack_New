@@ -5,7 +5,7 @@ import React from 'react';
 
 export async function getStaticParams() {
   const res = await fetch(
-    'https://silly-pithivier-838e11.netlify.app/api/products',
+    'https://audiophile-mern-stack-new-hcz5.vercel.app/api/products',
     // 'http://localhost:3000/api/products',
     {
       next: { revalidate: 60 },

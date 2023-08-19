@@ -9,7 +9,7 @@ const Header = () => {
     <div className="header">
       <div className="left">
         <div className="left-container">
-          <h2>new product</h2>
+          <div className="new-product-header">New Product</div>
           <h1>XX99 Mark II Headphones</h1>
           <p>
             {' '}

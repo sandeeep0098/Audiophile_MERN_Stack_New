@@ -545,9 +545,6 @@ const CheckoutForm = () => {
                 )}
               </div>
             </div>
-            <button type="submit" onSubmit={formSubmitHandler}>
-              submit
-            </button>
           </form>
           <Summary onSubmit={formSubmitHandler} />
         </div>

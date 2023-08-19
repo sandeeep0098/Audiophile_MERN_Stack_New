@@ -81,12 +81,6 @@ const Cart = ({ showCartHandler, cartisopen }: any) => {
             width={300}
             height={300}
           ></Image>
-          <Image
-            src={emptyCartimg2}
-            alt="empty-cart-gif"
-            width={300}
-            height={300}
-          ></Image>
 
           <p>Ops Your Cart Is Empty!!</p>
         </div>

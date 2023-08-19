@@ -18,14 +18,15 @@
       //   background-color: red;
       color: white;
       flex-direction: column;
-      h2 {
-        font-size: 14px;
-        width: 21rem;
-        height: 2rem;
+      .new-product-header {
+        font-size: 1.6rem;
+        max-width: 23rem;
+        max-height: 2rem;
         font-weight: normal;
         color: gray;
         letter-spacing: 10px;
         margin-bottom: 0;
+        text-transform: uppercase;
       }
       h1 {
         width: 40rem;

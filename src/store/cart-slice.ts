@@ -1,17 +1,32 @@
+// import { createSlice } from '@reduxjs/toolkit';
+
+// const cartProductsFromStorage = localStorage.getItem('cartProducts');
+// const products =
+//   cartProductsFromStorage !== null ? JSON.parse(cartProductsFromStorage) : [];
+
+// const totalQuantityFromStorage = localStorage.getItem('totalQuantity');
+// const totalQuantity =
+//   totalQuantityFromStorage !== null ? JSON.parse(totalQuantityFromStorage) : 0;
+
+// const totalAmountFromStorage = localStorage.getItem('totalAmount');
+// const totalAmount =
+//   totalAmountFromStorage !== null ? JSON.parse(totalAmountFromStorage) : 0;
 import { createSlice } from '@reduxjs/toolkit';
 
+const cartProductsFromStorage =
+  typeof window !== 'undefined' ? localStorage.getItem('cartProducts') : null;
 const products =
-  localStorage.getItem('cartProducts') !== null
-    ? JSON.parse(localStorage.getItem('cartProducts'))
-    : [];
+  cartProductsFromStorage !== null ? JSON.parse(cartProductsFromStorage) : [];
+
+const totalQuantityFromStorage =
+  typeof window !== 'undefined' ? localStorage.getItem('totalQuantity') : null;
 const totalQuantity =
-  localStorage.getItem('totalQuantity') !== null
-    ? JSON.parse(localStorage.getItem('totalQuantity'))
-    : 0;
+  totalQuantityFromStorage !== null ? JSON.parse(totalQuantityFromStorage) : 0;
+
+const totalAmountFromStorage =
+  typeof window !== 'undefined' ? localStorage.getItem('totalAmount') : null;
 const totalAmount =
-  localStorage.getItem('totalAmount') !== null
-    ? JSON.parse(localStorage.getItem('totalAmount'))
-    : 0;
+  totalAmountFromStorage !== null ? JSON.parse(totalAmountFromStorage) : 0;
 
 const cartSlice = createSlice({
   name: 'cart',
@@ -57,24 +72,29 @@ const cartSlice = createSlice({
       const existingProduct = state.products.find(
         (product) => product._id === id
       );
-      state.totalQuantity--;
-      state.totalAmount -= existingProduct.price;
+      if (existingProduct) {
+        state.totalQuantity--;
+        state.totalAmount -= existingProduct.price;
 
-      if (existingProduct.quantity === 1) {
-        state.products = state.products.filter((product) => product._id !== id);
-      } else {
-        existingProduct.quantity--;
-        existingProduct.totalPrice -= existingProduct.price;
+        if (existingProduct.quantity === 1) {
+          state.products = state.products.filter(
+            (product) => product._id !== id
+          );
+        } else {
+          existingProduct.quantity--;
+          existingProduct.totalPrice -= existingProduct.price;
+        }
+
+        localStorage.setItem(
+          'cartProducts',
+          JSON.stringify(state.products.map((product) => product))
+        );
+        localStorage.setItem(
+          'totalQuantity',
+          JSON.stringify(state.totalQuantity)
+        );
+        localStorage.setItem('totalAmount', JSON.stringify(state.totalAmount));
       }
-      localStorage.setItem(
-        'cartProducts',
-        JSON.stringify(state.products.map((product) => product))
-      );
-      localStorage.setItem(
-        'totalQuantity',
-        JSON.stringify(state.totalQuantity)
-      );
-      localStorage.setItem('totalAmount', JSON.stringify(state.totalAmount));
     },
     removeAllProducts(state) {
       state.products = [];

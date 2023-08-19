@@ -212,7 +212,7 @@ const CheckoutForm = () => {
     console.log('Entered Card Holder Name:', enteredCardHolderName);
     try {
       const res = await fetch(
-        'https://silly-pithivier-838e11.netlify.app/api/useritems',
+        'http://silly-pithivier-838e11.netlify.app/api/useritems',
         {
           // const res = await fetch('http://localhost:3000/api/userinputs', {
           method: 'POST',

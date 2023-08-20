@@ -11,9 +11,7 @@ import ManageProduct from '../UI/ManageProduct';
 import ProductListItem from '../product/ProductListItem';
 import CartProduct from './CartProduct';
 
-import emptyCartimg2 from '../../../public/cart-empty.png';
 import emptyCartimg from '../../../public/empty-cart.png';
-import headphoneImg from '../../../public/assets/cart/image-xx59-headphones.jpg';
 
 const Cart = ({ showCartHandler, cartisopen }: any) => {
   const cartProducts = useAppSelector((state) => state.cart.products);
@@ -100,7 +98,5 @@ const Cart = ({ showCartHandler, cartisopen }: any) => {
     );
   }
 };
-
-console.log(headphoneImg);
 
 export default Cart;

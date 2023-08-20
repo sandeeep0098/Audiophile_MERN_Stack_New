@@ -4,17 +4,23 @@ import './Summary.scss';
 import ProductLinkPrimaryButton from '../UI/productLinkPrimaryButton';
 import blackheadphones from '../../../public/assets/cart/image-xx99-mark-two-headphones.jpg';
 import Image from 'next/image';
-import { useState } from 'react';
-
+import { useState, useEffect } from 'react';
+import emptyCartimg from '../../../public/empty-cart.png';
 import { useAppDispatch, useAppSelector } from '@/hooks/hooks';
 
 const Summary = ({ onSubmit }) => {
   const cartProducts = useAppSelector((state) => state.cart.products);
-  const cartQuantity = useAppSelector((state) => state.cart.totalQuantity);
+
   const cartTotalAmount = useAppSelector((state) => state.cart.totalAmount);
-  const cartItemQuantiy = useAppSelector((state) => state.cart);
+
   const vatAmount = (cartTotalAmount + 50) * 0.18;
   const grandTotalAmount = cartTotalAmount + vatAmount + 50;
+
+  useEffect(() => {
+    if (cartTotalAmount === 0) {
+      window.location.href = '/';
+    }
+  }, [cartTotalAmount]);
 
   return (
     <div className="summary">

@@ -1,3 +1,5 @@
+@custom-media --viewportTablet (min-width: 768px);
+@custom-media --viewportDesktop (min-width: 1024px);
 .navbar {
   background-color: var(--colorGreyDark);
   height: 10rem;

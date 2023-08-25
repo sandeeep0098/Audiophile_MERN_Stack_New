@@ -212,12 +212,12 @@ const CheckoutForm = () => {
     console.log('Entered Card Holder Name:', enteredCardHolderName);
     try {
       const res = await fetch(
-        'https://audiophile-mern-stack-new-3tq6.vercel.app/api/userinputs',
+        'https://audiophile-mern-stack-new-hcz5.vercel.app/api/userinputs',
         {
           // const res = await fetch('http://localhost:3000/api/userinputs', {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
-          mode: 'cors',
+
           body: JSON.stringify({
             enteredName,
             enteredEmail,
